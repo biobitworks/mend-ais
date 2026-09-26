@@ -1,0 +1,16 @@
+{
+  "schema_version": "mend.antigence.runtime.v1",
+  "provider": "LOCAL",
+  "runtime": "ANTIGENCE",
+  "runtime_version": "1.0.0b1",
+  "execution_state": "EXECUTED",
+  "input_result_sha256": "166ae30f5e902b6e39c5fd7249daacec6a8b4927b04ca894cce9401a3b248f09",
+  "response": "reject",
+  "anomaly_count": 3,
+  "total_checks": 6,
+  "is_suspicious": true,
+  "limitations": [
+    "Anomaly screening is not scientific truth validation",
+    "No causal or clinical validation"
+  ]
+}

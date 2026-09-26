@@ -1,0 +1,36 @@
+{
+  "fco_id": "fco_612f8a006034e1621129291e44ca28d4988ba5a0f1cad81d06961e2cc59ce15d",
+  "content_sha256": "612f8a006034e1621129291e44ca28d4988ba5a0f1cad81d06961e2cc59ce15d",
+  "fco_type": "RELEASE_DECISION_FCO",
+  "canonicalization": "RFC8785-like JSON: UTF-8, sorted keys, separators comma/colon, ensure_ascii=false",
+  "execution_state": "SUPPORTED",
+  "payload": {
+    "decision": "AUTHORIZED",
+    "authority": "DETERMINISTIC_MEND_POLICY_GATE",
+    "purpose": "research",
+    "rules": {
+      "synthetic_only": true,
+      "explicit_identifiers_excluded": true,
+      "antigence_execution_recorded": true,
+      "antigence_is_not_release_authority": true
+    },
+    "antigence_state": "NEGATIVE"
+  },
+  "parent_fco_ids": [
+    "fco_36eb6f0166ecb92732229316005ddbd81bd9458c2e6690c9f68b175499a3923b"
+  ],
+  "purpose": "research",
+  "sensitivity_class": "SYNTHETIC",
+  "transformation": "DETERMINISTIC_POLICY_EVALUATION",
+  "executor": "MEND_POLICY_GATE_V1",
+  "provider": "LOCAL",
+  "model_id": "NULL",
+  "input_sha256": "36eb6f0166ecb92732229316005ddbd81bd9458c2e6690c9f68b175499a3923b",
+  "verification_state": "NEGATIVE",
+  "release_state": "SUPPORTED",
+  "policy_ref": "MEND_SYNTHETIC_RESEARCH_RELEASE_V1",
+  "provenance_refs": [
+    "fco_36eb6f0166ecb92732229316005ddbd81bd9458c2e6690c9f68b175499a3923b"
+  ],
+  "breakpoint_ref": "MEND_VERIFICATION_BREAKPOINT_V1"
+}

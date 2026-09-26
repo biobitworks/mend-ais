@@ -1,0 +1,25 @@
+{
+  "schema_version": "mend.breakpoint.v2",
+  "breakpoint_id": "MEND_PREDECESSOR_RECOVERY_V1",
+  "root_kind": "MEND_PREDECESSOR_RECOVERY_MERKLE_V1",
+  "hash_algorithm": "SHA-256",
+  "parent_breakpoint_id": "MEND_CORE_20260926_B1",
+  "parent_root_sha256": "becd6b955af0b9c797e3b29dd950d85ea7cf371fe26de2bb0ccc97d4cdb09323",
+  "git_commit_if_available": "c33da1460fdd0c89a239dac26eb76b9326ad5dbc",
+  "canonical_leaf_count": 4,
+  "canonical_leaf_order": "lexicographic logical_path",
+  "canonicalization": "raw file bytes; SHA-256 lowercase hex",
+  "leaf_preimage_definition": "b'mend-fco-leaf-v1\\0' || UTF8(logical_path) || NUL || ASCII(file_sha256_hex)",
+  "node_preimage_definition": "b'mend-fco-node-v1\\0' || left_digest_bytes || right_digest_bytes",
+  "odd_node_rule": "duplicate final node",
+  "canonical_leaves": [
+    {"logical_path":"agent_manifest.json","artifact_type":"PREDECESSOR_RECOVERY","bytes":1557,"file_sha256":"a07afdf210974a08ec6eb06a6a42fa1a6eb56b8086744e19b8f9afa0cfd050fb","leaf_sha256":"03b9e59a88873e4cebb127c23769f333cad89ba8dfca7efad5cbc71e3c195abc"},
+    {"logical_path":"breakpoints/mend_core_breakpoint_v1.json","artifact_type":"PREDECESSOR_RECOVERY","bytes":7117,"file_sha256":"87590135ff7d5f44f004df3363488ccdd9df28ecd1f18d59d09e40fd13af1eca","leaf_sha256":"55a047d039f796c8e840377d274bb6f60b9a50d6d9d1972f1831440be41525c3"},
+    {"logical_path":"fcg/core_fcg.json","artifact_type":"PREDECESSOR_RECOVERY","bytes":7650,"file_sha256":"37e4685f13cc6f5e77a26309fc9a4875d8af0c34a92e76165a164cb1467d3294","leaf_sha256":"1001cd3e1ae8ad366e35c697c61b78c8e725ce1d7fc98940672532fcbd1813ea"},
+    {"logical_path":"receipts/public_release_receipt.json","artifact_type":"PREDECESSOR_RECOVERY","bytes":7075,"file_sha256":"852fdb4c009e9d5cce635b81eb83249dc9d5b6d3c4da082544d2215b263ae092","leaf_sha256":"e17e6df03925149eaa52f7c0b11fc6514da6dd57847e48b011ed5a8108b22a99"}
+  ],
+  "merkle_root_sha256": "bba5e3fbbdcac3ca94e0507a3507326531e753c87b288394f452116b61f0443f",
+  "execution_state": "OBSERVED",
+  "scope_note": "Starting state recovered before successor mutation.",
+  "claim_boundary": "Integrity of declared predecessor leaves only; not scientific truth, causal proof, clinical validity, security completeness, or compliance."
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": "mend.breakpoint.v2",
+  "breakpoint_id": "MEND_VERIFICATION_BREAKPOINT_V1",
+  "root_kind": "MEND_VERIFICATION_MERKLE_V1",
+  "hash_algorithm": "SHA-256",
+  "parent_breakpoint_id": "MEND_MODEL_EXECUTION_BREAKPOINT_V1",
+  "parent_root_sha256": "16267a29cbefb7b5ab4717506e249ee8738ac0a2117a5d9b22fa7a3ba57ecee8",
+  "git_commit_if_available": "cdd46be2588e8f4f4af2fcb43302fc9d25d82cc5",
+  "canonical_leaf_count": 2,
+  "canonical_leaf_order": "lexicographic logical_path",
+  "canonicalization": "raw file bytes; SHA-256 lowercase hex",
+  "leaf_preimage_definition": "b'mend-fco-leaf-v1\\0' || UTF8(logical_path) || NUL || ASCII(file_sha256_hex)",
+  "node_preimage_definition": "b'mend-fco-node-v1\\0' || left_digest_bytes || right_digest_bytes",
+  "odd_node_rule": "duplicate final node",
+  "canonical_leaves": [
+    {
+      "logical_path": "fco/antigence_verification.json",
+      "artifact_type": "MEND_VERIFICATION_MERKLE_V1",
+      "bytes": 2050,
+      "file_sha256": "ad1eec4b94be2db7c6f56908a231e5c4ee4fc95d56fab907fa84709e28299492",
+      "leaf_sha256": "b6f604240f5f3cdaf186ab0255707d6641607416dc1dfd05492f6b2e35e82a8c"
+    },
+    {
+      "logical_path": "fco/model_result.json",
+      "artifact_type": "MEND_VERIFICATION_MERKLE_V1",
+      "bytes": 1917,
+      "file_sha256": "a3aa744f0436064825c51fb756b3c332aaec7d8ed8e9ff2511903e5eae608e2c",
+      "leaf_sha256": "430280048be00bbdc94570c2102dba132346ccac94110a05b162ae525d33e746"
+    }
+  ],
+  "merkle_root_sha256": "33f4093141250da2de7d3b78a6f6d1bd50467a950c081bae0c3cad64ebaec303",
+  "execution_state": "OBSERVED",
+  "scope_note": "Sequential checkpoint BP5; only artifacts available at this phase.",
+  "claim_boundary": "Integrity of declared leaves only; not scientific truth, causal proof, clinical validity, security completeness, or regulatory compliance."
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": "mend.breakpoint.v2",
+  "breakpoint_id": "MEND_RELEASE_BREAKPOINT_V1",
+  "root_kind": "MEND_RELEASE_MERKLE_V1",
+  "hash_algorithm": "SHA-256",
+  "parent_breakpoint_id": "MEND_VERIFICATION_BREAKPOINT_V1",
+  "parent_root_sha256": "33f4093141250da2de7d3b78a6f6d1bd50467a950c081bae0c3cad64ebaec303",
+  "git_commit_if_available": "cdd46be2588e8f4f4af2fcb43302fc9d25d82cc5",
+  "canonical_leaf_count": 3,
+  "canonical_leaf_order": "lexicographic logical_path",
+  "canonicalization": "raw file bytes; SHA-256 lowercase hex",
+  "leaf_preimage_definition": "b'mend-fco-leaf-v1\\0' || UTF8(logical_path) || NUL || ASCII(file_sha256_hex)",
+  "node_preimage_definition": "b'mend-fco-node-v1\\0' || left_digest_bytes || right_digest_bytes",
+  "odd_node_rule": "duplicate final node",
+  "canonical_leaves": [
+    {
+      "logical_path": "fco/release.json",
+      "artifact_type": "MEND_RELEASE_MERKLE_V1",
+      "bytes": 1695,
+      "file_sha256": "cf06d57f90ee84568a0f0ad01c5ba81d5a9d6f50c4d5475695374a6d83f1d940",
+      "leaf_sha256": "675979c73e2acef9b3c48231be60518de917c3c542b344076014d790b755d4bb"
+    },
+    {
+      "logical_path": "fco/release_decision.json",
+      "artifact_type": "MEND_RELEASE_MERKLE_V1",
+      "bytes": 1372,
+      "file_sha256": "2b8a6fa74efb406d730627500adaa3f3adc321f9d626f8953a92e515ad06f2f7",
+      "leaf_sha256": "0fa2a787afa8d6798babba3401a87c66ff592dd80bbe7f301a591df82be4089f"
+    },
+    {
+      "logical_path": "receipts/egress_test.json",
+      "artifact_type": "MEND_RELEASE_MERKLE_V1",
+      "bytes": 185,
+      "file_sha256": "a63d34545325df6efddd6c28f87286462ec0808d2c8ab1798dc7d61ef58dffd0",
+      "leaf_sha256": "4999a9881dbd2b52a9cadf69b8fb55f753ac30486459ded389b57f81de1a6de2"
+    }
+  ],
+  "merkle_root_sha256": "270616cea4872be7f359b505a89fe4b18e2736e92f9026d457bea7695bc31b38",
+  "execution_state": "OBSERVED",
+  "scope_note": "Sequential checkpoint BP6; only artifacts available at this phase.",
+  "claim_boundary": "Integrity of declared leaves only; not scientific truth, causal proof, clinical validity, security completeness, or regulatory compliance."
+}

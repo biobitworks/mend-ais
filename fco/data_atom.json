@@ -1,0 +1,38 @@
+{
+  "fco_id": "fco_d8a103cc298b22ccf90fec5e8c2002a64cc631e4891d016d79986c1b8dc6f169",
+  "content_sha256": "d8a103cc298b22ccf90fec5e8c2002a64cc631e4891d016d79986c1b8dc6f169",
+  "fco_type": "DATA_ATOM_FCO",
+  "canonicalization": "RFC8785-like JSON: UTF-8, sorted keys, separators comma/colon, ensure_ascii=false",
+  "execution_state": "OBSERVED",
+  "payload": {
+    "resource_count": 5,
+    "resource_types": [
+      "Condition",
+      "Observation",
+      "Patient"
+    ],
+    "fixture_sha256": "80fc1fbb5eb3f600435cbc6353189bd9716240e42cda94f8d375585d36c78a9a"
+  },
+  "parent_fco_ids": [
+    "fco_62a8c339b0bf1299d000e2d4369fcb0251d4bd02cb7138e91f4122a46fc1cce7"
+  ],
+  "source_ref": "data/core/synthetic_fhir_bundle.json",
+  "source_date": "2026-09-26",
+  "retrieval_time": "2026-09-26T00:00:00Z",
+  "creation_time": "2026-09-26T00:00:00Z",
+  "freshness_days": 0,
+  "freshness_class": "FRESH",
+  "rights_class": "PUBLIC_REPOSITORY_FIXTURE",
+  "sensitivity_class": "SYNTHETIC",
+  "purpose": "research",
+  "transformation": "DETERMINISTIC_MINIMIZATION",
+  "executor": "MEND_DETERMINISTIC_ATOMIZER_V1",
+  "input_sha256": "80fc1fbb5eb3f600435cbc6353189bd9716240e42cda94f8d375585d36c78a9a",
+  "verification_state": "SUPPORTED",
+  "release_state": "NOT_COMPUTED",
+  "policy_ref": "MEND_SYNTHETIC_RESEARCH_V1",
+  "provenance_refs": [
+    "fco_62a8c339b0bf1299d000e2d4369fcb0251d4bd02cb7138e91f4122a46fc1cce7"
+  ],
+  "breakpoint_ref": "NOT_COMPUTED"
+}

@@ -1,0 +1,49 @@
+{
+  "schema_version": "mend.breakpoint.v2",
+  "breakpoint_id": "MEND_FCO_SCHEMA_BREAKPOINT_V1",
+  "root_kind": "MEND_FCO_SCHEMA_MERKLE_V1",
+  "hash_algorithm": "SHA-256",
+  "parent_breakpoint_id": "MEND_PREDECESSOR_RECOVERY_V1",
+  "parent_root_sha256": "bba5e3fbbdcac3ca94e0507a3507326531e753c87b288394f452116b61f0443f",
+  "git_commit_if_available": "c33da1460fdd0c89a239dac26eb76b9326ad5dbc",
+  "canonical_leaf_count": 4,
+  "canonical_leaf_order": "lexicographic logical_path",
+  "canonicalization": "raw file bytes; SHA-256 lowercase hex",
+  "leaf_preimage_definition": "b'mend-fco-leaf-v1\\0' || UTF8(logical_path) || NUL || ASCII(file_sha256_hex)",
+  "node_preimage_definition": "b'mend-fco-node-v1\\0' || left_digest_bytes || right_digest_bytes",
+  "odd_node_rule": "duplicate final node",
+  "canonical_leaves": [
+    {
+      "logical_path": "schemas/fcg.schema.json",
+      "artifact_type": "MEND_FCO_SCHEMA_MERKLE_V1",
+      "bytes": 759,
+      "file_sha256": "4a23f2d6d6d8815b2fb3ebdb8f3333fa9acea9a6ad6623b9052e66ecf4feeb67",
+      "leaf_sha256": "c7cbfdee46a58dfc885933f0076b731d9e52a8e36782d21f4b07ea65c9ee24c7"
+    },
+    {
+      "logical_path": "schemas/fco.schema.json",
+      "artifact_type": "MEND_FCO_SCHEMA_MERKLE_V1",
+      "bytes": 1584,
+      "file_sha256": "79fd55c37f880ebbcbf892a819ff6ea8e49b7211b2a7482c287b02dcf6b01a1b",
+      "leaf_sha256": "01651343947bd1a793f10f854fb7270cfbebe8c54a5606f721b7a9f3b51d4e19"
+    },
+    {
+      "logical_path": "scripts/fco_successor.py",
+      "artifact_type": "MEND_FCO_SCHEMA_MERKLE_V1",
+      "bytes": 18641,
+      "file_sha256": "d2b572dea3884a28a2a6400fb7a597187989399f423671fdaa6b4e85c493fde5",
+      "leaf_sha256": "00d13fcc45892b0773bad6c7a2ebfb053c79c3c6cf5f9ac4f99235eeb7c81569"
+    },
+    {
+      "logical_path": "tests/test_fco_successor.py",
+      "artifact_type": "MEND_FCO_SCHEMA_MERKLE_V1",
+      "bytes": 1194,
+      "file_sha256": "99899f1d3fcc1205bc09bc57f862dd2d7f25584eb48d2f73a2eb932a3ac455ca",
+      "leaf_sha256": "3c53aeacdff3a0f3f126da905f848a6646170dbbbb11dda1436c1e4b99f72010"
+    }
+  ],
+  "merkle_root_sha256": "8ffd2e19ae119bbb65535e3dbcb4d5d15e407420b022602357009c46e21c3bba",
+  "execution_state": "OBSERVED",
+  "scope_note": "Sequential checkpoint BP1; only artifacts available at this phase.",
+  "claim_boundary": "Integrity of declared leaves only; not scientific truth, causal proof, clinical validity, security completeness, or regulatory compliance."
+}

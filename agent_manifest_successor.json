@@ -1,0 +1,16 @@
+{
+  "schema_version": "mend.agent_manifest.v2",
+  "project": "Mend AIs FCO/FCG Bedrock Successor",
+  "entrypoint": "breakpoints/bp8_mend_public_successor_merkle_v1.json",
+  "predecessor_breakpoint": "breakpoints/mend_core_breakpoint_v1.json",
+  "fcg": "fcg/successor_fcg.json",
+  "fco_directory": "fco/",
+  "local_capability_request": {
+    "aws_environment": "user config directory; LOCAL_SECRET; never committed",
+    "required_presence": ["AWS_DEFAULT_REGION", "AWS_ACCESS_KEY_ID", "AWS_SECRET_ACCESS_KEY", "AWS_SESSION_TOKEN"],
+    "public_status_only": true
+  },
+  "judge_server": "python3 successor_server.py",
+  "state": "SUPPORTED",
+  "claim_boundary": "Merkle integrity and executed synthetic demonstration only; no scientific, causal, clinical, security-completeness, or regulatory claim."
+}

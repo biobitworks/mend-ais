@@ -1,0 +1,6 @@
+{
+  "schema_version": "mend.egress.v1",
+  "execution_state": "EXECUTED",
+  "explicit_identifier_egress": "PASS",
+  "claim_boundary": "Fixture scan only; no general compliance claim."
+}

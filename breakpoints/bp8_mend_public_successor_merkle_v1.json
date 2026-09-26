@@ -1,0 +1,455 @@
+{
+  "schema_version": "mend.breakpoint.v2",
+  "breakpoint_id": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+  "root_kind": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+  "hash_algorithm": "SHA-256",
+  "parent_breakpoint_id": "MEND_FCG_BREAKPOINT_V1",
+  "parent_root_sha256": "05c0b73ccae8a74eedbd71fe64ca1a5d378847aed81dca03c0d1e4b304778aca",
+  "git_commit_if_available": "2a8b59ea6d9854191433be5cd1d75b350033aa43",
+  "canonical_leaf_count": 62,
+  "canonical_leaf_order": "lexicographic logical_path",
+  "canonicalization": "raw file bytes; SHA-256 lowercase hex",
+  "leaf_preimage_definition": "b'mend-fco-leaf-v1\\0' || UTF8(logical_path) || NUL || ASCII(file_sha256_hex)",
+  "node_preimage_definition": "b'mend-fco-node-v1\\0' || left_digest_bytes || right_digest_bytes",
+  "odd_node_rule": "duplicate final node",
+  "canonical_leaves": [
+    {
+      "logical_path": ".gitignore",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 62,
+      "file_sha256": "55599eff4ae34a8cae2245e677e92f32c968940bbda2b248ad690cd6812a2538",
+      "leaf_sha256": "57c14c387d518aa41dc8783da3c1d58dcb42018b04c96006b36b4eade4eb5969"
+    },
+    {
+      "logical_path": "AGENTS.md",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 1219,
+      "file_sha256": "52f63f2f772941460ac2b5d28d2b735dd839a11f17d9349c30db974a2f828bbd",
+      "leaf_sha256": "3e45e6bb3d74ee08669b257f83fddcb6ccb1e73a4104a7739b37194204885b67"
+    },
+    {
+      "logical_path": "README.md",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 6034,
+      "file_sha256": "2964de7f9914da2f302fede94690b7b6bc0c67adaf24eb1a2acb988ddfc95f96",
+      "leaf_sha256": "6bec9abc1decc95f69ad4ffd2bdd3904a4bfffb6f0e711c5a0663f13ae2c03be"
+    },
+    {
+      "logical_path": "agent_manifest.json",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 1557,
+      "file_sha256": "a07afdf210974a08ec6eb06a6a42fa1a6eb56b8086744e19b8f9afa0cfd050fb",
+      "leaf_sha256": "03b9e59a88873e4cebb127c23769f333cad89ba8dfca7efad5cbc71e3c195abc"
+    },
+    {
+      "logical_path": "agent_manifest_successor.json",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 802,
+      "file_sha256": "f4939644aefeba271c399a312dd2136449cd440bff3b7307237f61d1a4e10987",
+      "leaf_sha256": "76ba3b8682b74c880d88d2f2da57ff271857b2caac04a8a276a479fe7f1e395a"
+    },
+    {
+      "logical_path": "breakpoints/bp0_predecessor_recovery.json",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 2253,
+      "file_sha256": "3fc8f4e6fbecba88e618f657975a4eb5c80394c2a1788d01943191b8569a90e2",
+      "leaf_sha256": "0dbdb3617cd18a290022ac741ea8696edaaab8c2b79a8b6790a307119d725768"
+    },
+    {
+      "logical_path": "breakpoints/bp1_mend_fco_schema_breakpoint_v1.json",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 2450,
+      "file_sha256": "1334ff9300d410ba2e233ca58f45edc09b7e0800c308ee00bd2293d602b748dd",
+      "leaf_sha256": "6748c57a3b91435257db33014cd8c8807ff1de151d617c3fed019513c8ec5c16"
+    },
+    {
+      "logical_path": "breakpoints/bp2_mend_source_atom_breakpoint_v1.json",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 1813,
+      "file_sha256": "94a1814ce1b86a165f764098d44b97f0b703625def3dcdeb9281e8657ea71173",
+      "leaf_sha256": "8a86d18ba7ccea80abf9ce34a210b51cef728915cade1e4174a5b133d0c45b21"
+    },
+    {
+      "logical_path": "breakpoints/bp3_mend_model_route_breakpoint_v1.json",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 1823,
+      "file_sha256": "ea42620e285b32dc0799117c76c24df89a8569ae0f5c0bfe6ec252f46d46a4a2",
+      "leaf_sha256": "31c1d58b9e847c6e04e53227494401a2d22f0c0ce552baf3b174f2fde98cd079"
+    },
+    {
+      "logical_path": "breakpoints/bp4_mend_model_execution_breakpoint_v1.json",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 2166,
+      "file_sha256": "4c42234b013f22b8c2469b8df4c9bae5801db5edbeade6b0c6a800ba845ef607",
+      "leaf_sha256": "e07e4c23fd932f9c3c4f3c80d02b01f146a0810361c056bee84b9231fa26550c"
+    },
+    {
+      "logical_path": "breakpoints/bp5_mend_verification_breakpoint_v1.json",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 1841,
+      "file_sha256": "c88b14593ae2f8234e7e0df6834c691b2750dc50254ce4c73887c0a7852cef82",
+      "leaf_sha256": "7c276a08c384b89929b756e16e2134afb847ed095bee25e9f405a5139d60e15e"
+    },
+    {
+      "logical_path": "breakpoints/bp6_mend_release_breakpoint_v1.json",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 2117,
+      "file_sha256": "84eb31cb0304611991119a5326bf62c2e2c7d46aad15875f92a59dee54cc2202",
+      "leaf_sha256": "fed991084546bc012419c8648cb26e74baed2ff74106a41f5f84d461fd6c8ad1"
+    },
+    {
+      "logical_path": "breakpoints/bp7_mend_fcg_breakpoint_v1.json",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 5126,
+      "file_sha256": "af43ca263b02a617cbed5497991bced8fc57c6421654193118084350baf6f9ae",
+      "leaf_sha256": "3973bfb0527e90427a14383f2edb0f12d6847edc552fc3b1f3d7be689994fd6d"
+    },
+    {
+      "logical_path": "breakpoints/mend_core_breakpoint_v1.json",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 7117,
+      "file_sha256": "87590135ff7d5f44f004df3363488ccdd9df28ecd1f18d59d09e40fd13af1eca",
+      "leaf_sha256": "55a047d039f796c8e840377d274bb6f60b9a50d6d9d1972f1831440be41525c3"
+    },
+    {
+      "logical_path": "data/core/synthetic_fhir_bundle.json",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 2578,
+      "file_sha256": "80fc1fbb5eb3f600435cbc6353189bd9716240e42cda94f8d375585d36c78a9a",
+      "leaf_sha256": "422d2bcd16888f9f516bbda5fa6290fde1d519449c3ed5cd415f4d10969e6a11"
+    },
+    {
+      "logical_path": "docs/ARCHITECTURE.md",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 2503,
+      "file_sha256": "967aa7ef78e15070c31135356b9cc015dd56e31d62c7b948b3de799210bbee4b",
+      "leaf_sha256": "65620284981f44e821d3cbcdb770bcbcd986374959ad64bda373b1a00eda8673"
+    },
+    {
+      "logical_path": "docs/FCO_SUCCESSOR.md",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 866,
+      "file_sha256": "82cace1dceeac4ecbaa82c3023919eb5171ac54d166edbbacd7ed754e335dd75",
+      "leaf_sha256": "9498050a094c2ac8139d0fb63bed7fc936a8004c91d743c2a1ac617a6d424cb8"
+    },
+    {
+      "logical_path": "docs/JUDGE_NAVIGATION.md",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 1855,
+      "file_sha256": "e7328312fe575f22e94cd1566174a25d72dfce528e1858afed4b603050498949",
+      "leaf_sha256": "d557b03f48c9063a95eb90a98e39573329e64a0cef23f732f0bb6a5b1dcc9d43"
+    },
+    {
+      "logical_path": "fcg/core_fcg.json",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 7650,
+      "file_sha256": "37e4685f13cc6f5e77a26309fc9a4875d8af0c34a92e76165a164cb1467d3294",
+      "leaf_sha256": "1001cd3e1ae8ad366e35c697c61b78c8e725ce1d7fc98940672532fcbd1813ea"
+    },
+    {
+      "logical_path": "fcg/successor_fcg.json",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 5909,
+      "file_sha256": "e1688c12e7c1f8e61ce81ab6265a045d1faf808016bfb9a8de35ae8221a2a864",
+      "leaf_sha256": "bfcb3af84265080b3020bd8187bff7aa441c755770ee9a80945f3ef7dd9d38cb"
+    },
+    {
+      "logical_path": "fco/antigence_verification.json",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 2050,
+      "file_sha256": "ad1eec4b94be2db7c6f56908a231e5c4ee4fc95d56fab907fa84709e28299492",
+      "leaf_sha256": "b6f604240f5f3cdaf186ab0255707d6641607416dc1dfd05492f6b2e35e82a8c"
+    },
+    {
+      "logical_path": "fco/breakpoint.json",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 1164,
+      "file_sha256": "d45618d133d44ad0c466422cdac95f63f467f1870fcf95fbba5bcfe0ddf9d432",
+      "leaf_sha256": "bb22768d47e94fdb3966d5827f65522e732f925679df4e36c7f9cca113a2ed98"
+    },
+    {
+      "logical_path": "fco/data_atom.json",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 1445,
+      "file_sha256": "7eb61a7d03caa4e218201fe3ee414226841d4121174fc5af2547c557e81db4af",
+      "leaf_sha256": "ffa22f0f5a1ff9f1d9272d2254f18e1967651a3fc2eaf06ab1113b05c1e57db1"
+    },
+    {
+      "logical_path": "fco/model_execution.json",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 1901,
+      "file_sha256": "bb080a77024926cc5d254d41b3c6fec03714a740eb571c5de691d6a41442eb26",
+      "leaf_sha256": "3aa4f0e248a154c63d1e59d4277e09ac5660ee7ec04530b839c5ce75a5dbbde9"
+    },
+    {
+      "logical_path": "fco/model_request.json",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 1758,
+      "file_sha256": "8a4220712382fb3ce98f992c95ef323fbcb96d1480749e0649b84da89fb3b925",
+      "leaf_sha256": "52880962fba54c61b518320b4d409460d45a1eb78563c4c08db3de1779d13769"
+    },
+    {
+      "logical_path": "fco/model_result.json",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 1917,
+      "file_sha256": "a3aa744f0436064825c51fb756b3c332aaec7d8ed8e9ff2511903e5eae608e2c",
+      "leaf_sha256": "430280048be00bbdc94570c2102dba132346ccac94110a05b162ae525d33e746"
+    },
+    {
+      "logical_path": "fco/model_route.json",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 2204,
+      "file_sha256": "daadede1fe7c3499686fae513487fbc2abb9eecd9eb0433e1a111d65f9cb1182",
+      "leaf_sha256": "42fc00acf738024662715b5be9b711302ddac6163e4c6cbecca480585e90be2b"
+    },
+    {
+      "logical_path": "fco/release.json",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 1695,
+      "file_sha256": "cf06d57f90ee84568a0f0ad01c5ba81d5a9d6f50c4d5475695374a6d83f1d940",
+      "leaf_sha256": "675979c73e2acef9b3c48231be60518de917c3c542b344076014d790b755d4bb"
+    },
+    {
+      "logical_path": "fco/release_decision.json",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 1372,
+      "file_sha256": "2b8a6fa74efb406d730627500adaa3f3adc321f9d626f8953a92e515ad06f2f7",
+      "leaf_sha256": "0fa2a787afa8d6798babba3401a87c66ff592dd80bbe7f301a591df82be4089f"
+    },
+    {
+      "logical_path": "fco/source.json",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 1265,
+      "file_sha256": "8dea05bb3e5bfc4ad9a292942429eb6d5bbec5356edb5963347229cb667a7f1f",
+      "leaf_sha256": "0ec2345ca725e311fdf4c7874fcdae92ec411cd3c44d80c2edfe2c307e208b9a"
+    },
+    {
+      "logical_path": "receipts/antigence_runtime.json",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 474,
+      "file_sha256": "355118ac35c5485e32b12b3f583c6f7847373895f479ed00e876ab1d1e541909",
+      "leaf_sha256": "74adf5a2580f96ea5174f8966238d5b646bb3b690d130dbd47665fcba60363bd"
+    },
+    {
+      "logical_path": "receipts/bedrock_execution.json",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 521,
+      "file_sha256": "a6f6830b2d8469abd7238f7266fce8c22b7fbc1c03ccd0d6e63da636c47fc349",
+      "leaf_sha256": "1222eed438fb9df00a6e6deddf31c34a78c231f574999a211b46d955aa94f680"
+    },
+    {
+      "logical_path": "receipts/demo_research_20260926.json",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 1391,
+      "file_sha256": "36f3c8276e6201b456128c513608ab4b90f67530a018dfa0b88adea4f6c3dd2b",
+      "leaf_sha256": "cee2d7f885acdf2b4a444df2dc1db3b3657cd5c831938dc86938154fa1611536"
+    },
+    {
+      "logical_path": "receipts/egress_test.json",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 185,
+      "file_sha256": "a63d34545325df6efddd6c28f87286462ec0808d2c8ab1798dc7d61ef58dffd0",
+      "leaf_sha256": "4999a9881dbd2b52a9cadf69b8fb55f753ac30486459ded389b57f81de1a6de2"
+    },
+    {
+      "logical_path": "receipts/node_resource_audit_20260926.json",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 3109,
+      "file_sha256": "586b689a55fcff2ae8ae723b4fc7698f048f577b74cec057cc4ead084e5d71b1",
+      "leaf_sha256": "4820df0eace8907866954a5583445d209990dba69c75883fb6d9da751a0036e1"
+    },
+    {
+      "logical_path": "receipts/public_release_receipt.json",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 7075,
+      "file_sha256": "852fdb4c009e9d5cce635b81eb83249dc9d5b6d3c4da082544d2215b263ae092",
+      "leaf_sha256": "e17e6df03925149eaa52f7c0b11fc6514da6dd57847e48b011ed5a8108b22a99"
+    },
+    {
+      "logical_path": "schemas/fcg.schema.json",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 759,
+      "file_sha256": "4a23f2d6d6d8815b2fb3ebdb8f3333fa9acea9a6ad6623b9052e66ecf4feeb67",
+      "leaf_sha256": "c7cbfdee46a58dfc885933f0076b731d9e52a8e36782d21f4b07ea65c9ee24c7"
+    },
+    {
+      "logical_path": "schemas/fco.schema.json",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 1584,
+      "file_sha256": "79fd55c37f880ebbcbf892a819ff6ea8e49b7211b2a7482c287b02dcf6b01a1b",
+      "leaf_sha256": "01651343947bd1a793f10f854fb7270cfbebe8c54a5606f721b7a9f3b51d4e19"
+    },
+    {
+      "logical_path": "scripts/bind_antigence_receipt.py",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 1176,
+      "file_sha256": "29a3570225cde2476572c5619f7d25f346b1c6fadcb9aaefb162490e6d4d3b43",
+      "leaf_sha256": "0c4fe5f3b633cb64a63c29cbb497103259b9bc73492f38163ac3ec092cd57e6d"
+    },
+    {
+      "logical_path": "scripts/create_breakpoint.py",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 3273,
+      "file_sha256": "a0c83f41bd23080ba540ec7ff75458352a25c6ba4aabf3f7302d1f548280b965",
+      "leaf_sha256": "3a5833abfd20339c1ff161c9bc3b92e35163d71b315fb09521e3a8f7e6cbc348"
+    },
+    {
+      "logical_path": "scripts/create_public_successor_breakpoint.py",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 2411,
+      "file_sha256": "5b0a0b2f9a7c9c6314596bd839a3efddfd1c5021b4fc8009931c7b75b01195a9",
+      "leaf_sha256": "6b77539a0c9948b6b4d739eed673a99e819c452b0710836419e37a44b84ec900"
+    },
+    {
+      "logical_path": "scripts/enroll_local_node.py",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 2020,
+      "file_sha256": "6c034158106be7bdf508a9a2fa7ad9bf46f26a5584f64c94a7ee693e9ef0cb14",
+      "leaf_sha256": "b623ca672ab2aa9612a7c71630dea655017c2f103863add3cb24aaf240288d6d"
+    },
+    {
+      "logical_path": "scripts/fco_successor.py",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 18641,
+      "file_sha256": "d2b572dea3884a28a2a6400fb7a597187989399f423671fdaa6b4e85c493fde5",
+      "leaf_sha256": "00d13fcc45892b0773bad6c7a2ebfb053c79c3c6cf5f9ac4f99235eeb7c81569"
+    },
+    {
+      "logical_path": "scripts/finalize_successor.py",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 1915,
+      "file_sha256": "8451feab4d1953d2a3e93ebd98cc84703a27f6d15f68b73f41ee359246e52031",
+      "leaf_sha256": "99bcc22338849d4b73c62c438a67aabdb73b97665c21965e864bd6a6d1fb451b"
+    },
+    {
+      "logical_path": "scripts/reconcile_antigence_state.py",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 1969,
+      "file_sha256": "3982507c6dd1df8ac963c49762d3f3b4eee9c579fe7106977695800919cfab24",
+      "leaf_sha256": "b9fc76b4a88d8b8a6572b45b3754b86744ff797b25ccca43f585c795526d1798"
+    },
+    {
+      "logical_path": "scripts/run_antigence_adapter.py",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 925,
+      "file_sha256": "ca7308a72df2c332292398e2d61a2a1ab398b046cff2ee0df907bc1d133f0f66",
+      "leaf_sha256": "15178145bd6d7b6f59223e2e3e694ab7c9e1659545ea6af5728978f8fcee010a"
+    },
+    {
+      "logical_path": "scripts/seal_release.py",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 2713,
+      "file_sha256": "9acd96ef74f4a4279cd426db4aa39ea6f87df27717438562d8f0b60fd47195a8",
+      "leaf_sha256": "867daad05d2642d814d6a47606f7e61bfad2e371a8b0a9c283d991261db4c6fb"
+    },
+    {
+      "logical_path": "scripts/smoke.sh",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 1371,
+      "file_sha256": "1429698219da8935351ba9a91a438d3a1101ee5856e29dd622c44c72c25295c7",
+      "leaf_sha256": "fad0ca200ec7190db7203b82bf3a8b54da254832a9fa40b09378830aa8f60fa9"
+    },
+    {
+      "logical_path": "scripts/start_local.sh",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 1163,
+      "file_sha256": "330fc009882141cf7a9cd1eefdc47a039ce1169d5e0d330f806be4c083d127b4",
+      "leaf_sha256": "f0db467c9b319d55c14748f4cbbac389d2f85192a3e4887f312bdff18ef14fdb"
+    },
+    {
+      "logical_path": "scripts/status.sh",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 115,
+      "file_sha256": "a7fbc3fdd542a77fd90acb050b539d44a078823739cbee683a4b4a8ffd58c0b4",
+      "leaf_sha256": "42ac691fe848a6d934762a2b175660191e5131386b6cb2512413719d83e9e97a"
+    },
+    {
+      "logical_path": "scripts/stop.sh",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 307,
+      "file_sha256": "bedc67c6b598f21dd6d53db33dcb77a6978651e60be3c9bb4c39c50b0b54989c",
+      "leaf_sha256": "fb20545f73093d22f16e2f115fddf050cda97cb4f9d45d135ef1c56e8034d871"
+    },
+    {
+      "logical_path": "scripts/unlock_local.py",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 2879,
+      "file_sha256": "80107e126173785b1b0d47e66f3c49afe61c05bcd667d24f70d6a31c157fb571",
+      "leaf_sha256": "3451100e818ef51296f03b0aaaa424a770eb6ee740856325860c8c9f127c795e"
+    },
+    {
+      "logical_path": "scripts/verify_breakpoint.py",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 1547,
+      "file_sha256": "6e72f7b3f82df018654b7ee885633801a9b75e718b9d8e46c7e7cf4c465b971b",
+      "leaf_sha256": "7549d203be2d99bed4e2c36b6224add169596416fda47b7780b063f5588a2843"
+    },
+    {
+      "logical_path": "scripts/verify_fcg.py",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 1075,
+      "file_sha256": "890e7df8a0f61080cd3d287716ece6695237768561d9615d56ee4d29f528d256",
+      "leaf_sha256": "3cbd4edb84d7015aae483ec7474780ce2f30b1cde500a38fd5907009cc70355c"
+    },
+    {
+      "logical_path": "scripts/verify_successor.py",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 2319,
+      "file_sha256": "f8ad68b46dfad35f5361d1e6ba8ae2c520f0e97c9a72719a538739d8ca6ed487",
+      "leaf_sha256": "b2f5bdd6c8f1a2ff20710999409d88876dd7bce4294bb35fe96a3dca3155a82e"
+    },
+    {
+      "logical_path": "sdk/js/mend-sdk.js",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 791,
+      "file_sha256": "25e106399ef8217cc67473f9bb2be37a1c6f391b4c8627f2b86ec235329c2692",
+      "leaf_sha256": "affbdbffd045001821369eaf74bc9283627ea32f18e7aeb146b012f654303f8f"
+    },
+    {
+      "logical_path": "sdk/python/mend_sdk.py",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 1065,
+      "file_sha256": "7a0a29e8682aeb60905531c4ad9c628de4ddf4a08d5c774899be20911c3b6501",
+      "leaf_sha256": "724ee9f35b2075460e1058b788432c0c2d1e98667d0804f8c770b95486531a11"
+    },
+    {
+      "logical_path": "server.py",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 11171,
+      "file_sha256": "f40f86dc74379548e634828f9a56bc1f96b0ad8281ff340947f17f27324d6c35",
+      "leaf_sha256": "ac1b29a75f3b13637094dda25951d215adbcdf121707c7d5d8eec84c36b259b0"
+    },
+    {
+      "logical_path": "successor_server.py",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 2400,
+      "file_sha256": "30b81497d8663f49b9e5aecbb994384770f562df9e37639c096bab8f52afaa3b",
+      "leaf_sha256": "0bb660f3498c24a7c789fc37a9cfe22ca7dfde18587dbf8cd6f1be90ba97e305"
+    },
+    {
+      "logical_path": "tests/test_fco_successor.py",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 1194,
+      "file_sha256": "99899f1d3fcc1205bc09bc57f862dd2d7f25584eb48d2f73a2eb932a3ac455ca",
+      "leaf_sha256": "3c53aeacdff3a0f3f126da905f848a6646170dbbbb11dda1436c1e4b99f72010"
+    },
+    {
+      "logical_path": "web/index.html",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 3159,
+      "file_sha256": "93e835420d302cf39455a12ca7dc8d522ba8fdabcbac2eb9834bcbdcecf6114c",
+      "leaf_sha256": "83728571c9cb00434e6eb5ca7873da7fa05ab60677a459e790fb20970dfdbddd"
+    },
+    {
+      "logical_path": "web/successor.html",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 1348,
+      "file_sha256": "ae29657d578776326c52d6dec48afa2476da1cf36be98d548d38a14e3dad4da4",
+      "leaf_sha256": "1e1619deaa63cde4922cd3aa2e6a1b77a2bcf74e0862d014036d86dc0aa1c21f"
+    }
+  ],
+  "merkle_root_sha256": "0b198fdbdb795386f82d286b6df1a67b5c25bc03c5a9098b8c8dbce0146e3c0f",
+  "execution_state": "SUPPORTED",
+  "scope_note": "Public-safe successor artifact set finalized after tests and scans.",
+  "claim_boundary": "Integrity of declared leaves only; not scientific truth, causal proof, clinical validity, security completeness, or regulatory compliance."
+}

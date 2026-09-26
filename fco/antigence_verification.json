@@ -1,0 +1,56 @@
+{
+  "fco_id": "fco_36eb6f0166ecb92732229316005ddbd81bd9458c2e6690c9f68b175499a3923b",
+  "content_sha256": "36eb6f0166ecb92732229316005ddbd81bd9458c2e6690c9f68b175499a3923b",
+  "fco_type": "ANTIGENCE_VERIFICATION_FCO",
+  "canonicalization": "RFC8785-like JSON: UTF-8, sorted keys, separators comma/colon, ensure_ascii=false",
+  "execution_state": "NEGATIVE",
+  "payload": {
+    "verification_method": "ANTIGENCE_LOGIC_ANTIBODY_PLUS_DETERMINISTIC_CHALLENGE_V1",
+    "challenge_result": {
+      "nonempty": true,
+      "result_hash_match": true,
+      "explicit_identifier_absent": true,
+      "claim_boundary_present": true
+    },
+    "limitations": [
+      "No scientific truth validation",
+      "No causal validation",
+      "No clinical validation",
+      "No compliance determination"
+    ],
+    "antigence_result": {
+      "runtime": "ANTIGENCE",
+      "runtime_version": "1.0.0b1",
+      "execution_state": "EXECUTED",
+      "response": "reject",
+      "anomaly_count": 3,
+      "total_checks": 6,
+      "is_suspicious": true,
+      "limitations": [
+        "Anomaly screening is not scientific truth validation",
+        "No causal or clinical validation"
+      ]
+    }
+  },
+  "parent_fco_ids": [
+    "fco_88b65774fb6a029d52265eb42cd19b60d9a473c769a525be948dfa374a155f55"
+  ],
+  "purpose": "research",
+  "sensitivity_class": "SYNTHETIC",
+  "transformation": "DETERMINISTIC_CHALLENGE",
+  "executor": "LOCAL_ANTIGENCE_RUNTIME_AND_MEND_ADAPTER",
+  "provider": "LOCAL",
+  "model_id": "NULL",
+  "model_version": "1.0.0b1",
+  "inference_profile": "NULL",
+  "input_sha256": "166ae30f5e902b6e39c5fd7249daacec6a8b4927b04ca894cce9401a3b248f09",
+  "result_sha256": "0e0a149cd7eb1c22f7d5159bc814a21a85d77541adee8a82c760a3151c9f8a0c",
+  "verification_state": "NEGATIVE",
+  "release_state": "NOT_COMPUTED",
+  "policy_ref": "MEND_ANTIGENCE_VERIFICATION_V1",
+  "provenance_refs": [
+    "fco_88b65774fb6a029d52265eb42cd19b60d9a473c769a525be948dfa374a155f55",
+    "receipts/antigence_runtime.json"
+  ],
+  "breakpoint_ref": "MEND_MODEL_EXECUTION_BREAKPOINT_V1"
+}
