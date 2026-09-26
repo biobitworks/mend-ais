@@ -68,9 +68,9 @@
       "id": "framework.antigence",
       "type": "Framework",
       "label": "Antigence",
-      "state": "SOURCE_BUILT_RUNTIME_DEGRADED",
+      "state": "SOURCE_DIRTY_ISOLATED_RUNTIME_PASS_LEGACY_VENV_BROKEN",
       "private_head": "1f12b3c2b2f7df90e11753f74443e4add48d5b46",
-      "detail": "Working tree dirty; project .venv is a broken external-volume symlink. Not a live dependency of public MVP."
+      "detail": "Working tree dirty. Legacy project .venv points to an unavailable external volume, but an isolated external uv environment successfully ran the current CLI and imported antigence 1.0.0b1."
     },
     {
       "id": "framework.seedgraph",
@@ -126,6 +126,13 @@
       "label": "Explicit identifier egress scan",
       "state": "OBSERVED_EXECUTED_PASS",
       "evidence": "research release forbidden_hits=[]"
+    },
+    {
+      "id": "interface.agent_entrypoint",
+      "type": "Interface",
+      "label": "Downstream agent entrypoint",
+      "state": "IMPLEMENTED",
+      "source_path": "agent_manifest.json"
     }
   ],
   "edges": [
@@ -203,6 +210,16 @@
       "from": "framework.gsigmad",
       "to": "check.explicit_identifier_egress",
       "type": "GOVERNANCE_ADAPTER_FOR"
+    },
+    {
+      "from": "interface.agent_entrypoint",
+      "to": "service.mend_public_demo",
+      "type": "NAVIGATES_TO"
+    },
+    {
+      "from": "interface.agent_entrypoint",
+      "to": "dataset.synthetic_fhir_core_v1",
+      "type": "NAVIGATES_TO"
     }
   ],
   "release_seal_receipt": "receipts/public_release_receipt.json",

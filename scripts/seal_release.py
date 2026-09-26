@@ -8,6 +8,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 RECEIPT = ROOT / "receipts/public_release_receipt.json"
 FILES = [
+    "AGENTS.md",
+    "agent_manifest.json",
     ".gitignore",
     "README.md",
     "data/core/synthetic_fhir_bundle.json",

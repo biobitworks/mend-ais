@@ -1,0 +1,39 @@
+{
+  "schema_version": "mend.agent_entrypoint.v1",
+  "project": "Mend AIs",
+  "repo": "https://github.com/biobitworks/mend-ais",
+  "primary_fcg": "fcg/core_fcg.json",
+  "release_receipt": "receipts/public_release_receipt.json",
+  "core_dataset": "data/core/synthetic_fhir_bundle.json",
+  "mac_start": "./scripts/start_macstudio.sh",
+  "mac_smoke": "./scripts/smoke.sh",
+  "live_endpoints": {
+    "status": "/api/status",
+    "fcg": "/api/fcg",
+    "dataset": "/api/dataset",
+    "research_demo": "/api/demo?purpose=research",
+    "treatment_demo": "/api/demo?purpose=treatment"
+  },
+  "sdks": {
+    "mac_python": "sdk/python/mend_sdk.py",
+    "s26_browser": "sdk/js/mend-sdk.js"
+  },
+  "core_model": {
+    "runtime_name": "longhorizon-liquid-230m:latest",
+    "family": "Liquid LFM2",
+    "parameters": "229.69M",
+    "quantization": "Q4_K_M",
+    "state": "OBSERVED_EXECUTED_ON_MAC"
+  },
+  "authority": {
+    "model": "ADVISORY_ONLY",
+    "release": "DETERMINISTIC_POLICY_GATE"
+  },
+  "downstream_rules": [
+    "read FCG before execution",
+    "reject claim upgrades unsupported by state",
+    "run smoke before live-demo claims",
+    "do not infer native S26 execution",
+    "do not infer clinical/compliance validation"
+  ]
+}

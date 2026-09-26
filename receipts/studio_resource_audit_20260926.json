@@ -42,8 +42,10 @@
       "head": "1f12b3c2b2f7df90e11753f74443e4add48d5b46",
       "branch": "federation/v1.0.0b2-remediation",
       "worktree": "DIRTY",
-      "runtime": "DEGRADED_BROKEN_VENV_SYMLINK",
-      "public_dependency": false
+      "runtime": "ISOLATED_RUNTIME_PASS_LEGACY_VENV_BROKEN",
+      "public_dependency": false,
+      "isolated_import_version": "1.0.0b1",
+      "isolated_cli_help": "OBSERVED_PASS"
     },
     "ollarma": {
       "head": "3f197544a376691f8265ad5ede877b3e63bfeb44",

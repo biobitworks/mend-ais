@@ -1,16 +1,16 @@
 {
   "schema_version": "mend.public_release_receipt.v1",
-  "generated_at": "2026-09-26T17:07:45.597416Z",
+  "generated_at": "2026-09-26T17:10:50.751995Z",
   "root_kind": "MEND_PUBLIC_RELEASE_MERKLE_V1",
   "hash": "SHA-256",
   "leaf_order": "lexicographic path",
   "leaf_preimage": "b'mend-release-leaf-v1\\0' || UTF8(path) || NUL || ASCII(file_sha256_hex)",
   "node_preimage": "b'mend-release-node-v1\\0' || left_digest_bytes || right_digest_bytes",
   "odd_node_rule": "duplicate final node",
-  "canonical_leaf_count": 18,
+  "canonical_leaf_count": 20,
   "tree_widths": [
-    18,
-    9,
+    20,
+    10,
     5,
     3,
     2,
@@ -24,10 +24,22 @@
       "leaf_sha256": "3b4c20d1f1c5ad819b9e511e7e05521a8d489bc893b2109e2d2fd79976ca19aa"
     },
     {
+      "path": "AGENTS.md",
+      "bytes": 1072,
+      "file_sha256": "d1440b85a19c38d57e6e7e597e4587bf8822e17d2ae302e22f374f69aa2170c7",
+      "leaf_sha256": "d7bc6d2f6db9546877a4c15b7937f1f645917bb998e38f03b181f3046c8338db"
+    },
+    {
       "path": "README.md",
-      "bytes": 4874,
-      "file_sha256": "0f1f134db767796cd1890812a0c4a6c56cff1b4ee1ecb19aa3974f95ebb9b731",
-      "leaf_sha256": "990d14804bf225a1445a5d51aa2bd1ab0f5a0066067dfe9b5ddd47d692e74390"
+      "bytes": 5198,
+      "file_sha256": "b26d0e4bda8fd492e4cfb34d905a08ec5df1f07a63ac90581dfc3fd3261dfe06",
+      "leaf_sha256": "22d5be661c376f8bec67d0e79cf905c66df88fed80134ed1be2e0a06c883d725"
+    },
+    {
+      "path": "agent_manifest.json",
+      "bytes": 1228,
+      "file_sha256": "3792449d1bffdcf084845d49d259f4a3cdcf2a2df833967bfcec89e73f3e5ac0",
+      "leaf_sha256": "dc5c99eadcaee2129155a4438c35eb7cba066f8d16725d23be52a083eec01a84"
     },
     {
       "path": "data/core/synthetic_fhir_bundle.json",
@@ -49,9 +61,9 @@
     },
     {
       "path": "fcg/core_fcg.json",
-      "bytes": 6263,
-      "file_sha256": "ddccdbd11d3fccacce605800f91e71305558339982b165190df05f27ece05d30",
-      "leaf_sha256": "3db187399012b1aed507b5c13f19894ca77e58a58cabc84c233f05d9a536cd6a"
+      "bytes": 6826,
+      "file_sha256": "ecf2cc78bddec9f46330b9ad9ea698c073b3e62ca889af42efed7a9a4ee70c58",
+      "leaf_sha256": "7c5661aec7d823d2139d43bba7e1d9697d568f8e5041dddaa7a6d87f85444f0f"
     },
     {
       "path": "receipts/demo_research_20260926.json",
@@ -61,15 +73,15 @@
     },
     {
       "path": "receipts/studio_resource_audit_20260926.json",
-      "bytes": 3034,
-      "file_sha256": "6d2ad9207e2dcc471e3d8348a59a00770cd186f203e14683f5147390e768585d",
-      "leaf_sha256": "2167d8e4de2884e94aecf09bf67ac7a50034a1bc8e20a0e60cb30cadb2f775ba"
+      "bytes": 3134,
+      "file_sha256": "892b5c37a35183bafa41fe86c55a430ebcbc617606d39fb466fe900cde1ba8a7",
+      "leaf_sha256": "198ce7dc560d34830185292a152f10f7bb98037d4633d69ad20dae32deb59592"
     },
     {
       "path": "scripts/seal_release.py",
-      "bytes": 2488,
-      "file_sha256": "158d176969228502678f41fbe5bb768329fc590ee3f36751d1c409e1c9a28458",
-      "leaf_sha256": "caad2025fdb6a57d6f1839bf2a88f29d7c0fc8d4b1afaf2859bee635f1f76354"
+      "bytes": 2532,
+      "file_sha256": "ec5c7288b25da947340c2a760d4c10566d21417051d59fa6d40844bee816d4fb",
+      "leaf_sha256": "7e2958bc55f5ed95f1b2ac490fc5a99603130cfb6aa88c9702fab2b2438ece1a"
     },
     {
       "path": "scripts/smoke.sh",
@@ -126,6 +138,6 @@
       "leaf_sha256": "ed9e33226496180d7aa2ee3efb1ca2176c4bd0f114e66ca156d6dad0d2056add"
     }
   ],
-  "merkle_root_sha256": "aa7a4aad1951c7684e125782735528dddacc1bdcf7ecbd50ffbca17a3f32a6e1",
+  "merkle_root_sha256": "06d020a06d21c99b6e39672e819e9b8a1dcfb8f29e0d92a1109afe4a8873a737",
   "scope_note": "Root covers the declared public artifact files above. It does not establish truth, causality, clinical validity, or compliance."
 }

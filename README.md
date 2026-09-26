@@ -26,10 +26,10 @@ Then open **http://127.0.0.1:8899** on the Mac. The startup script also prints t
 | Model runtime | Ollama 0.33.0 | **OBSERVED_PASS** on Studio |
 | Orchestration | Ollarma | **OBSERVED_DEGRADED_CHAT_PASS**; direct model chat works, selection artifact stale |
 | Release authority | deterministic Mend gate | **IMPLEMENTED**; model is advisory only |
-| Mac SDK | Python `MendClient` | **IMPLEMENTED_COMPILE_PASS** |
-| S26 SDK | zero-install browser `MendClient` | **IMPLEMENTED_SYNTAX_PASS / NOT_TESTED_ON_S26** |
+| Mac SDK | Python `MendClient` | **OBSERVED_EXECUTED_PASS_ON_MAC** |
+| S26 SDK | zero-install browser `MendClient` | **OBSERVED_EXECUTED_PASS_IN_NODE / NOT_TESTED_ON_S26** |
 | FCG | `fcg/core_fcg.json` | **IMPLEMENTED** with explicit evidence states |
-| Antigence | private existing project | source built; runtime currently degraded, not a live MVP dependency |
+| Antigence | private existing project | source built; isolated runtime smoke PASS; legacy project venv link broken; not a live MVP dependency |
 | SeedGraph | private existing project | CLI PASS; graph backend not running |
 | GettingScienceDone | private existing project | CLI PASS; doctor degraded by skill-install drift |
 
@@ -56,13 +56,15 @@ Run:
 python3 scripts/verify_fcg.py
 ```
 
-This validates graph references and the exact dataset SHA-256. It deliberately does **not** claim a Merkle root.
+This validates graph references and the exact dataset SHA-256. It does not claim an FCG root. The separate public-release receipt contains the actually computed Merkle root over its declared canonical public files.
 
 ## Judge navigation
 
 | Path | Why it matters |
 |---|---|
 | [Judge navigation](docs/JUDGE_NAVIGATION.md) | shortest inspection path for humans and agents |
+| [Downstream agent contract](AGENTS.md) | state discipline and execution rules |
+| [Agent manifest](agent_manifest.json) | machine-readable entrypoint for downstream agents |
 | [Architecture](docs/ARCHITECTURE.md) | trust boundary and private/public separation |
 | [Core FCG](fcg/core_fcg.json) | machine-readable system map |
 | [Synthetic core dataset](data/core/synthetic_fhir_bundle.json) | inspect exactly what enters the demo |
