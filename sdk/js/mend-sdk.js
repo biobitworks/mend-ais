@@ -19,6 +19,10 @@ export class MendClient {
     return this._get("/api/fcg");
   }
 
+  breakpoint() {
+    return this._get("/api/breakpoint");
+  }
+
   dataset() {
     return this._get("/api/dataset");
   }

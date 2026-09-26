@@ -2,14 +2,14 @@
   "schema_version": "mend.resource_audit.v1",
   "observed_at": "2026-09-26T17:00:17Z",
   "host": {
-    "name": "magicSTUDIObox",
+    "role": "EDGE_NODE_A",
     "os": "macOS 27.0",
     "arch": "arm64",
-    "desktop_commander": "online"
+    "remote_control": "OBSERVED_ONLINE"
   },
   "peer_devices": {
-    "magicPRObox": "offline/not observed this turn",
-    "Samsung Galaxy S26+": "not connected/not tested this turn"
+    "EDGE_NODE_B": "NOT_OBSERVED_THIS_TURN",
+    "MOBILE_EDGE": "NOT_TESTED"
   },
   "core_demo_ready": true,
   "core_dependencies": {
@@ -51,7 +51,7 @@
       "head": "3f197544a376691f8265ad5ede877b3e63bfeb44",
       "branch": "exp/fco-006-fresh-testset-prep",
       "worktree": "CLEAN",
-      "service": "OBSERVED_127.0.0.1:8484",
+      "service": "OBSERVED_LOCAL_ORCHESTRATOR_SERVICE",
       "health": "DEGRADED_SELECTION_STALE",
       "chat": "OBSERVED_PASS",
       "public_dependency": false

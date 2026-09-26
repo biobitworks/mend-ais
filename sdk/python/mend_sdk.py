@@ -18,6 +18,9 @@ class MendClient:
     def fcg(self):
         return self._get("/api/fcg")
 
+    def breakpoint(self):
+        return self._get("/api/breakpoint")
+
     def dataset(self):
         return self._get("/api/dataset")
 

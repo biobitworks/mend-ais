@@ -1,173 +1,172 @@
 {
-  "schema_version": "mend.public_release_receipt.v1",
-  "generated_at": "2026-09-26T17:32:23.499009Z",
-  "root_kind": "MEND_PUBLIC_RELEASE_MERKLE_V1",
+  "schema_version": "mend.breakpoint.v1",
+  "breakpoint_id": "MEND_CORE_20260926_B1",
+  "root_kind": "MEND_CORE_CAPABILITY_MERKLE_V1",
   "hash": "SHA-256",
+  "parent": {
+    "public_release_root_sha256": "06d020a06d21c99b6e39672e819e9b8a1dcfb8f29e0d92a1109afe4a8873a737",
+    "git_commit": "f9c1be0bc7eacfaeeee819067d1c82d35e2f13c0"
+  },
+  "canonical_leaf_count": 23,
   "leaf_order": "lexicographic path",
-  "leaf_preimage": "b'mend-release-leaf-v1\\0' || UTF8(path) || NUL || ASCII(file_sha256_hex)",
-  "node_preimage": "b'mend-release-node-v1\\0' || left_digest_bytes || right_digest_bytes",
+  "leaf_preimage": "b'mend-core-leaf-v1\\0' || UTF8(path) || NUL || ASCII(file_sha256_hex)",
+  "node_preimage": "b'mend-core-node-v1\\0' || left_digest_bytes || right_digest_bytes",
   "odd_node_rule": "duplicate final node",
-  "canonical_leaf_count": 25,
   "tree_widths": [
-    25,
-    13,
-    7,
-    4,
+    23,
+    12,
+    6,
+    3,
     2,
     1
   ],
   "canonical_leaves": [
     {
-      "path": ".gitignore",
-      "bytes": 62,
-      "file_sha256": "55599eff4ae34a8cae2245e677e92f32c968940bbda2b248ad690cd6812a2538",
-      "leaf_sha256": "216e2d242fbb7ebeec629f98a3121813b6397e74de6003293d0ed3392d62b2e4"
-    },
-    {
       "path": "AGENTS.md",
       "bytes": 1219,
       "file_sha256": "52f63f2f772941460ac2b5d28d2b735dd839a11f17d9349c30db974a2f828bbd",
-      "leaf_sha256": "cb7025e82a5abe05f530981dc48f1e2d5ba2318bff267e949eaeb83ccda99057"
+      "leaf_sha256": "ab9ee365863c62257cfada940de0f6e6745764d2c7d5f7579e27f7d11b6e3db0"
     },
     {
       "path": "README.md",
       "bytes": 6034,
       "file_sha256": "2964de7f9914da2f302fede94690b7b6bc0c67adaf24eb1a2acb988ddfc95f96",
-      "leaf_sha256": "f0ee0090e7de04084976428d6952fb6dadbd820d754eef2541ff84ff23e98ca1"
+      "leaf_sha256": "01507b4f633e0a481f549863acf44aa05df05a7093a59164db201ef7f8554c8a"
     },
     {
       "path": "agent_manifest.json",
       "bytes": 1557,
       "file_sha256": "a07afdf210974a08ec6eb06a6a42fa1a6eb56b8086744e19b8f9afa0cfd050fb",
-      "leaf_sha256": "9f0c4b5fda26d04b148249b24698ff7f76f3e4c01e2bc5f897ada8c6cf7dfc19"
-    },
-    {
-      "path": "breakpoints/mend_core_breakpoint_v1.json",
-      "bytes": 7117,
-      "file_sha256": "87590135ff7d5f44f004df3363488ccdd9df28ecd1f18d59d09e40fd13af1eca",
-      "leaf_sha256": "cf9c9a73259ee50b113bd7a2ab792c39d613170f156b72cda193b87ff660910b"
+      "leaf_sha256": "be038c0da48cb50f2b8ac751ac2cdadc6aa935d26b55afac47ab0afc1cbab949"
     },
     {
       "path": "data/core/synthetic_fhir_bundle.json",
       "bytes": 2578,
       "file_sha256": "80fc1fbb5eb3f600435cbc6353189bd9716240e42cda94f8d375585d36c78a9a",
-      "leaf_sha256": "5017a9b43cb3b002c04c58a426b0afce5a12262b892b58f2cc0adebbdd625276"
+      "leaf_sha256": "6ae58ffac7d101ef8cf58ee1df7bf01e54456758a8033a5e8edc647e14d8d634"
     },
     {
       "path": "docs/ARCHITECTURE.md",
       "bytes": 2503,
       "file_sha256": "967aa7ef78e15070c31135356b9cc015dd56e31d62c7b948b3de799210bbee4b",
-      "leaf_sha256": "af577256379d7df1563e26f22b17599d577005c18dadcb64b00fb96a1abc805b"
+      "leaf_sha256": "ff6543c600c4cb472606611a9cb29f82b29673c11d3ecba8f369d6e6b1f9eea5"
     },
     {
       "path": "docs/JUDGE_NAVIGATION.md",
       "bytes": 1855,
       "file_sha256": "e7328312fe575f22e94cd1566174a25d72dfce528e1858afed4b603050498949",
-      "leaf_sha256": "da491f43364f646deaa029a27d31e44373971757ba72f79a04b5cfdbfebf2cd8"
+      "leaf_sha256": "d2b675e6b26645c68867eeb9479e252ca9eedd11f37f53f1215d1ed74e300616"
     },
     {
       "path": "fcg/core_fcg.json",
       "bytes": 7650,
       "file_sha256": "37e4685f13cc6f5e77a26309fc9a4875d8af0c34a92e76165a164cb1467d3294",
-      "leaf_sha256": "8ddf459dd0f90d7be0a4f6e14570c3233371101372738ffdc024f0f6aa34bafd"
+      "leaf_sha256": "5aadc79d9447a6de39421d4b7c57886fe680f790e577f3784e28dc9a00d36e8c"
     },
     {
       "path": "receipts/demo_research_20260926.json",
       "bytes": 1391,
       "file_sha256": "36f3c8276e6201b456128c513608ab4b90f67530a018dfa0b88adea4f6c3dd2b",
-      "leaf_sha256": "7b6bf52b51777d69030003c254aa18dec7a55367e26b7e18b3732b18acb360c9"
+      "leaf_sha256": "7967a937142c162c261da3c7b9e93e3c0e12c876ccad4861d913b8dd52f7c918"
     },
     {
       "path": "receipts/node_resource_audit_20260926.json",
       "bytes": 3109,
       "file_sha256": "586b689a55fcff2ae8ae723b4fc7698f048f577b74cec057cc4ead084e5d71b1",
-      "leaf_sha256": "459ffa1e02bf557a188dc4f097e605bc8834e369f9137717fd26c49e11f81a90"
+      "leaf_sha256": "5606a33c3d4c33ce468c6a61f64ed981207aee6cbc95c2ac92cc90bd804d84ea"
     },
     {
       "path": "scripts/create_breakpoint.py",
       "bytes": 3273,
       "file_sha256": "a0c83f41bd23080ba540ec7ff75458352a25c6ba4aabf3f7302d1f548280b965",
-      "leaf_sha256": "1e46015838c7b9f1aef55887bd62fe2dc98cc218c28563ef2a3f7ad8570952bc"
+      "leaf_sha256": "0f26c9969e0745465514cd796f4cffcb92a54cf038dc6b0b2626124cacb33ed4"
     },
     {
       "path": "scripts/enroll_local_node.py",
       "bytes": 2020,
       "file_sha256": "6c034158106be7bdf508a9a2fa7ad9bf46f26a5584f64c94a7ee693e9ef0cb14",
-      "leaf_sha256": "2d6ea5a69ea6b2a2ba77850da596b3d6577951b332d5c6d104e8aa585922c545"
+      "leaf_sha256": "3fd461b3c2ef4fa6eae0a4e576ca6310ec9f2c54ab3d88c434591cb21782dd67"
     },
     {
       "path": "scripts/seal_release.py",
       "bytes": 2713,
       "file_sha256": "9acd96ef74f4a4279cd426db4aa39ea6f87df27717438562d8f0b60fd47195a8",
-      "leaf_sha256": "b867da40cda54a5fd5c03de5791a0200859381e17f9244e30f155c01d7057701"
+      "leaf_sha256": "9e4db008a8e8c752885b8bdcdfe24448ffaf267634848d9833453ccb4394086e"
     },
     {
       "path": "scripts/smoke.sh",
       "bytes": 1371,
       "file_sha256": "1429698219da8935351ba9a91a438d3a1101ee5856e29dd622c44c72c25295c7",
-      "leaf_sha256": "a1818d6955b587ef4aae48aba80ff12e37fdc823c070595b7c386c7f1ca0477c"
+      "leaf_sha256": "b3f96e3c5b0375e13547b07b508cca4e4b3e26da76a63a614a174f5dead143b1"
     },
     {
       "path": "scripts/start_local.sh",
       "bytes": 1163,
       "file_sha256": "330fc009882141cf7a9cd1eefdc47a039ce1169d5e0d330f806be4c083d127b4",
-      "leaf_sha256": "d871a1c70316d08028cdcca2275d00d0fd5ce732aee7921c3436e1cd998ead9a"
+      "leaf_sha256": "5e5ec5c5b3e733b0dea3edac4c94125cca3a222dae624c3ce810ae5c2f82086e"
     },
     {
       "path": "scripts/status.sh",
       "bytes": 115,
       "file_sha256": "a7fbc3fdd542a77fd90acb050b539d44a078823739cbee683a4b4a8ffd58c0b4",
-      "leaf_sha256": "618b2a2f5c9dd624ac41e08d338c2d8176ac7172bb36415e2f503593d3d7a3f8"
+      "leaf_sha256": "ce0ce008cb41956e4e44c061de006efbc324a08fd08ce981f5a7725fd027d874"
     },
     {
       "path": "scripts/stop.sh",
       "bytes": 307,
       "file_sha256": "bedc67c6b598f21dd6d53db33dcb77a6978651e60be3c9bb4c39c50b0b54989c",
-      "leaf_sha256": "c9a9319ad38e13f49c0600c0d738e76de1830fff92002624c4f2a7065b62127b"
+      "leaf_sha256": "cfe21f285b9a406e75d75f943b929e8e611477e51f8180381f92cf52fd9533b2"
     },
     {
       "path": "scripts/unlock_local.py",
       "bytes": 2879,
       "file_sha256": "80107e126173785b1b0d47e66f3c49afe61c05bcd667d24f70d6a31c157fb571",
-      "leaf_sha256": "d6226479294bdf2fbfe7882a257a6420d5f43e0048d9d385a526c7c9b3d51e99"
+      "leaf_sha256": "132f0f5b78afc57f07ca02e59caea6dad773478491b82b646e512309b7f1a5c3"
     },
     {
       "path": "scripts/verify_breakpoint.py",
       "bytes": 1547,
       "file_sha256": "6e72f7b3f82df018654b7ee885633801a9b75e718b9d8e46c7e7cf4c465b971b",
-      "leaf_sha256": "c9d3ee5dac7ab871066113e2ec49c5ed6512b46a00c801ff56c487d19b26804e"
+      "leaf_sha256": "df6f34cc5771c534726c8e5bcf4b96d24ff4d41fefbae21f371bb1e75e6b9809"
     },
     {
       "path": "scripts/verify_fcg.py",
       "bytes": 1075,
       "file_sha256": "890e7df8a0f61080cd3d287716ece6695237768561d9615d56ee4d29f528d256",
-      "leaf_sha256": "b8fafbb03b4b3efa15ffeb26b82056335d4816424725168b89f222bad1ee8fe5"
+      "leaf_sha256": "27a8d01246699fdf179c488930a5b9bdcb71d817cf7ffbb3d0c863b6e2d11f68"
     },
     {
       "path": "sdk/js/mend-sdk.js",
       "bytes": 791,
       "file_sha256": "25e106399ef8217cc67473f9bb2be37a1c6f391b4c8627f2b86ec235329c2692",
-      "leaf_sha256": "a83338654d988ca1981772bcd723b8ee08ecce91f870aa9e8fd9221b8c49bb81"
+      "leaf_sha256": "3b8ae2b0e103ec9124fba52aa0fb0cf110dd6f2a3ebf4f364612750d84366248"
     },
     {
       "path": "sdk/python/mend_sdk.py",
       "bytes": 1065,
       "file_sha256": "7a0a29e8682aeb60905531c4ad9c628de4ddf4a08d5c774899be20911c3b6501",
-      "leaf_sha256": "a0c03ecc7850054d1b7bf4836f1968ab465b631caa6a2e3a6ff5dbcfa599bc8a"
+      "leaf_sha256": "7a98ccb6d482793192b665c785816cd3a7de6b74ed7d4ae2544ccdd7e677566c"
     },
     {
       "path": "server.py",
       "bytes": 11171,
       "file_sha256": "f40f86dc74379548e634828f9a56bc1f96b0ad8281ff340947f17f27324d6c35",
-      "leaf_sha256": "1e745b458049f8aa009760d342a51f48a3998491bee863f08bb3198e9229799b"
+      "leaf_sha256": "adf831062a0536f730bb4dd481ae0fda76298ed279916610bc7f53de4f353a99"
     },
     {
       "path": "web/index.html",
       "bytes": 3159,
       "file_sha256": "93e835420d302cf39455a12ca7dc8d522ba8fdabcbac2eb9834bcbdcecf6114c",
-      "leaf_sha256": "ed9e33226496180d7aa2ee3efb1ca2176c4bd0f114e66ca156d6dad0d2056add"
+      "leaf_sha256": "101e3c25d90e2fbe3958dbf02e4a0daf0b9dd91a84d143e7661aa9565fc0ab26"
     }
   ],
-  "merkle_root_sha256": "1c42459e52503d1e83ea1813800707aa662a37156a04e4aa2bdb46acfb8a74a7",
-  "scope_note": "Root covers the declared public artifact files above. It does not establish truth, causality, clinical validity, or compliance."
+  "merkle_root_sha256": "becd6b955af0b9c797e3b29dd950d85ea7cf371fe26de2bb0ccc97d4cdb09323",
+  "unlock_protocol": {
+    "kind": "LOCAL_CAPABILITY_DESCRIPTOR_V1",
+    "descriptor_location": "user config directory; never committed",
+    "binding": "descriptor.breakpoint_root_sha256 must equal this merkle root",
+    "public_secrets": "NONE",
+    "authorization_boundary": "possession of local machine account and descriptor"
+  },
+  "claim_boundary": "This breakpoint establishes identity/integrity of the declared core files only; it does not establish truth, causality, clinical validity, compliance, or device authorization."
 }

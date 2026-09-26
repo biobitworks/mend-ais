@@ -2,7 +2,7 @@
 
 **Local-first health data mesh — public hackathon judge MVP**
 
-Mend AIs demonstrates a narrow, auditable primitive: synthetic health data is processed inside a local Mac Studio boundary, a real local Liquid model can produce an advisory interpretation, and a deterministic purpose gate controls the released object.
+Mend AIs demonstrates a narrow, auditable primitive: synthetic health data is processed inside a local Mac edge node boundary, a real local Liquid model can produce an advisory interpretation, and a deterministic purpose gate controls the released object.
 
 > **Claim boundary:** local execution reduces network exposure; it does not by itself establish HIPAA/GDPR/CCPA compliance or formal de-identification. The current public demo contains synthetic data only.
 
@@ -11,7 +11,8 @@ Mend AIs demonstrates a narrow, auditable primitive: synthetic health data is pr
 ```bash
 git clone https://github.com/biobitworks/mend-ais.git
 cd mend-ais
-./scripts/start_macstudio.sh
+python3 scripts/verify_breakpoint.py
+./scripts/start_local.sh
 ./scripts/smoke.sh
 ```
 
@@ -70,7 +71,7 @@ This validates graph references and the exact dataset SHA-256. It does not claim
 | [Synthetic core dataset](data/core/synthetic_fhir_bundle.json) | inspect exactly what enters the demo |
 | [Python SDK](sdk/python/mend_sdk.py) | Mac/downstream-agent integration |
 | [Browser SDK](sdk/js/mend-sdk.js) | S26/browser integration |
-| [Studio audit](receipts/studio_resource_audit_20260926.json) | exact observed local state |
+| [Node audit](receipts/node_resource_audit_20260926.json) | exact observed local state |
 | [Release receipt](receipts/public_release_receipt.json) | exact public-file hashes and computed release root |
 
 ## API
@@ -87,7 +88,7 @@ Once running:
 
 ## S26 / phone demo
 
-Connect the S26+ to the same LAN as the Studio, run `./scripts/start_macstudio.sh`, and open the printed `LAN http://...` address in Chrome. The browser uses the same public JavaScript SDK in `sdk/js/mend-sdk.js`.
+Connect the S26+ to the same LAN as the Studio, run `./scripts/start_local.sh`, and open the printed `LAN http://...` address in Chrome. The browser uses the same public JavaScript SDK in `sdk/js/mend-sdk.js`.
 
 **Current evidence state:** browser SDK implemented; actual S26 execution is NOT_TESTED in this release receipt because this session has no connected Android/ADB target.
 
@@ -98,3 +99,21 @@ Antigence, Ollarma, SeedGraph, and GettingScienceDone are existing private proje
 ## Safety
 
 This is a research/hackathon demonstrator, not a medical device and not a clinical decision-support system. It uses synthetic data and does not make diagnosis or treatment decisions.
+
+## Merkle breakpoint and local unlock
+
+The primary machine-to-agent handoff is not a hostname. It is the Merkle breakpoint in `breakpoints/mend_core_breakpoint_v1.json`.
+
+```bash
+python3 scripts/verify_breakpoint.py
+python3 scripts/unlock_local.py --list
+```
+
+On a machine without an enrolled local descriptor, the second command returns `LOCKED`. On an authorized local edge node, the operator can bind that machine's private capabilities to the current public breakpoint:
+
+```bash
+python3 scripts/enroll_local_node.py
+python3 scripts/unlock_local.py --list
+```
+
+The descriptor is written outside the repository with user-only permissions. Public agents see capability keys and evidence states; machine-local paths and endpoints are returned only on the local node when a specific capability is requested.

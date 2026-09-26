@@ -14,6 +14,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 DATASET = ROOT / "data/core/synthetic_fhir_bundle.json"
 FCG = ROOT / "fcg/core_fcg.json"
+BREAKPOINT = ROOT / "breakpoints/mend_core_breakpoint_v1.json"
+LOCAL_DESCRIPTOR = Path.home() / ".config" / "mend-ais" / "unlock.json"
 WEB = ROOT / "web"
 MODEL = "longhorizon-liquid-230m:latest"
 OLLAMA = "http://127.0.0.1:11434"
@@ -41,6 +43,21 @@ def post_json(url: str, payload: dict, timeout: float = 20.0):
     )
     with urllib.request.urlopen(request, timeout=timeout) as response:
         return json.load(response)
+
+def local_unlock_summary():
+    if not LOCAL_DESCRIPTOR.is_file() or not BREAKPOINT.is_file():
+        return {"status": "LOCKED"}
+    try:
+        bp = load_json(BREAKPOINT)
+        descriptor = load_json(LOCAL_DESCRIPTOR)
+        if descriptor.get("breakpoint_root_sha256") != bp.get("merkle_root_sha256"):
+            return {"status": "LOCKED", "reason": "BREAKPOINT_BINDING_MISMATCH"}
+        return {
+            "status": "UNLOCKED",
+            "capabilities": sorted(descriptor.get("capabilities", {}).keys()),
+        }
+    except Exception:
+        return {"status": "LOCKED", "reason": "LOCAL_DESCRIPTOR_INVALID"}
 
 def probe_services():
     result = {
@@ -222,9 +239,13 @@ class Handler(BaseHTTPRequestHandler):
                     "services": probe_services(),
                     "dataset_sha256": sha256_obj(load_json(DATASET)),
                     "fcg_sha256": hashlib.sha256(FCG.read_bytes()).hexdigest(),
+                    "breakpoint": load_json(BREAKPOINT) if BREAKPOINT.is_file() else {"status": "NOT_COMPUTED"},
+                    "local_unlock": local_unlock_summary(),
                 })
             elif parsed.path == "/api/fcg":
                 self.send_json(load_json(FCG))
+            elif parsed.path == "/api/breakpoint":
+                self.send_json(load_json(BREAKPOINT))
             elif parsed.path == "/api/dataset":
                 self.send_json(load_json(DATASET))
             elif parsed.path == "/api/demo":

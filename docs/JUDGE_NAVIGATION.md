@@ -2,14 +2,16 @@
 
 | Need | Start here | Machine-readable? |
 |---|---|---|
-| Run the demo | `./scripts/start_macstudio.sh` | Yes |
+| Verify public core | `python3 scripts/verify_breakpoint.py` | Yes |
+| Unlock local capabilities | `python3 scripts/unlock_local.py --list` | Yes |
+| Run the demo | `./scripts/start_local.sh` | Yes |
 | Verify live stack | `./scripts/smoke.sh` | Yes |
 | Inspect resources/states | `fcg/core_fcg.json` | Yes |
 | Inspect core dataset | `data/core/synthetic_fhir_bundle.json` | Yes |
 | Call from Python | `sdk/python/mend_sdk.py` | Yes |
 | Call from phone/browser | `sdk/js/mend-sdk.js` | Yes |
 | Understand boundaries | `docs/ARCHITECTURE.md` | Markdown |
-| Audit machine observations | `receipts/studio_resource_audit_20260926.json` | Yes |
+| Audit machine observations | `receipts/node_resource_audit_20260926.json` | Yes |
 | Verify published artifact hashes | `receipts/public_release_receipt.json` | Yes after release sealing |
 
 ## Recommended downstream-agent sequence
@@ -23,3 +25,14 @@
 7. Verify content hashes from the release receipt before relying on file identity.
 
 No Merkle root should be inferred from the FCG itself unless a receipt explicitly declares its canonical leaves and computed root.
+
+## Breakpoint-first agent entry
+
+The stable public address is the Merkle breakpoint, not a machine hostname:
+
+```bash
+python3 scripts/verify_breakpoint.py
+python3 scripts/unlock_local.py --list
+```
+
+`UNLOCKED` means the current machine has a local descriptor bound to the verified breakpoint. It does not mean a remote machine, private key, credential, or private repository has been published.

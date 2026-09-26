@@ -5,18 +5,18 @@
   "primary_fcg": "fcg/core_fcg.json",
   "release_receipt": "receipts/public_release_receipt.json",
   "core_dataset": "data/core/synthetic_fhir_bundle.json",
-  "mac_start": "./scripts/start_macstudio.sh",
   "mac_smoke": "./scripts/smoke.sh",
   "live_endpoints": {
     "status": "/api/status",
     "fcg": "/api/fcg",
     "dataset": "/api/dataset",
     "research_demo": "/api/demo?purpose=research",
-    "treatment_demo": "/api/demo?purpose=treatment"
+    "treatment_demo": "/api/demo?purpose=treatment",
+    "breakpoint": "/api/breakpoint"
   },
   "sdks": {
     "mac_python": "sdk/python/mend_sdk.py",
-    "s26_browser": "sdk/js/mend-sdk.js"
+    "mobile_browser": "sdk/js/mend-sdk.js"
   },
   "core_model": {
     "runtime_name": "longhorizon-liquid-230m:latest",
@@ -30,10 +30,16 @@
     "release": "DETERMINISTIC_POLICY_GATE"
   },
   "downstream_rules": [
+    "verify breakpoint before execution",
     "read FCG before execution",
-    "reject claim upgrades unsupported by state",
+    "preserve explicit evidence states",
+    "use local unlock only for machine-local capabilities",
+    "never print local descriptor paths or secrets into public artifacts",
     "run smoke before live-demo claims",
-    "do not infer native S26 execution",
+    "do not infer native mobile execution",
     "do not infer clinical/compliance validation"
-  ]
+  ],
+  "breakpoint": "breakpoints/mend_core_breakpoint_v1.json",
+  "local_start": "./scripts/start_local.sh",
+  "local_unlock": "python3 scripts/unlock_local.py --list"
 }

@@ -6,18 +6,18 @@
   "claim_boundary": "Hashes establish artifact identity/integrity only. Model output is advisory; deterministic policy controls release.",
   "nodes": [
     {
-      "id": "device.macstudio",
+      "id": "device.edge_node_a",
       "type": "Device",
-      "label": "magicSTUDIObox",
+      "label": "Edge node A",
       "state": "OBSERVED_ONLINE",
-      "evidence": "Desktop Commander online 2026-09-26"
+      "evidence": "Authorized local edge node observed online during successor audit"
     },
     {
-      "id": "device.magicpro",
+      "id": "device.edge_node_b",
       "type": "Device",
-      "label": "magicPRObox",
-      "state": "NOT_OBSERVED_THIS_TURN_OFFLINE",
-      "evidence": "Desktop Commander listed device offline"
+      "label": "Edge node B",
+      "state": "NOT_OBSERVED_THIS_TURN",
+      "evidence": "Secondary authorized edge node was not reachable during successor audit"
     },
     {
       "id": "device.s26plus",
@@ -53,16 +53,16 @@
       "label": "Ollama",
       "state": "OBSERVED_PASS",
       "version": "0.33.0",
-      "endpoint": "http://127.0.0.1:11434"
+      "capability_key": "runtime.model.local"
     },
     {
       "id": "runtime.ollarma",
       "type": "Runtime",
       "label": "Ollarma local execution",
       "state": "OBSERVED_DEGRADED_CHAT_PASS",
-      "endpoint": "http://127.0.0.1:8484",
       "reason_code": "SELECTION_STALE",
-      "private_head": "3f197544a376691f8265ad5ede877b3e63bfeb44"
+      "private_head": "3f197544a376691f8265ad5ede877b3e63bfeb44",
+      "capability_key": "runtime.orchestrator.local"
     },
     {
       "id": "framework.antigence",
@@ -111,7 +111,7 @@
       "state": "OBSERVED_EXECUTED_PASS",
       "source_path": "server.py",
       "endpoint": "http://127.0.0.1:8899",
-      "evidence": "scripts/start_macstudio.sh + scripts/smoke.sh passed on magicSTUDIObox 2026-09-26"
+      "evidence": "scripts/start_local.sh + scripts/smoke.sh passed on an authorized local edge node"
     },
     {
       "id": "policy.release_gate_v1",
@@ -133,6 +133,22 @@
       "label": "Downstream agent entrypoint",
       "state": "IMPLEMENTED",
       "source_path": "agent_manifest.json"
+    },
+    {
+      "id": "interface.local_unlock",
+      "type": "Interface",
+      "label": "Local capability unlock",
+      "state": "IMPLEMENTED",
+      "source_path": "scripts/unlock_local.py",
+      "public_secrets": "NONE"
+    },
+    {
+      "id": "breakpoint.core.v1",
+      "type": "Breakpoint",
+      "label": "Core capability Merkle breakpoint",
+      "state": "IMPLEMENTED",
+      "source_path": "breakpoints/mend_core_breakpoint_v1.json",
+      "root_kind": "MEND_CORE_CAPABILITY_MERKLE_V1"
     }
   ],
   "edges": [
@@ -177,17 +193,17 @@
       "type": "CALLS"
     },
     {
-      "from": "device.macstudio",
+      "from": "device.edge_node_a",
       "to": "runtime.ollama",
       "type": "HOSTS"
     },
     {
-      "from": "device.macstudio",
+      "from": "device.edge_node_a",
       "to": "runtime.ollarma",
       "type": "HOSTS"
     },
     {
-      "from": "device.macstudio",
+      "from": "device.edge_node_a",
       "to": "service.mend_public_demo",
       "type": "HOSTS"
     },
@@ -220,6 +236,16 @@
       "from": "interface.agent_entrypoint",
       "to": "dataset.synthetic_fhir_core_v1",
       "type": "NAVIGATES_TO"
+    },
+    {
+      "from": "interface.agent_entrypoint",
+      "to": "interface.local_unlock",
+      "type": "MAY_REQUEST"
+    },
+    {
+      "from": "interface.agent_entrypoint",
+      "to": "breakpoint.core.v1",
+      "type": "VERIFIES_FIRST"
     }
   ],
   "release_seal_receipt": "receipts/public_release_receipt.json",
