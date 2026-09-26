@@ -11,6 +11,8 @@ fco["payload"]["verification_method"]="ANTIGENCE_LOGIC_ANTIBODY_PLUS_DETERMINIST
 fco["executor"]="LOCAL_ANTIGENCE_RUNTIME_AND_MEND_ADAPTER"
 fco["model_version"]=receipt["runtime_version"]
 fco["provenance_refs"].append("receipts/antigence_runtime.json")
+fco["execution_state"]="NEGATIVE" if receipt["is_suspicious"] else "SUPPORTED"
+fco["verification_state"]=fco["execution_state"]
 body={k:v for k,v in fco.items() if k not in {"fco_id","content_sha256"}}
 raw=json.dumps(body,sort_keys=True,separators=(",",":"),ensure_ascii=False).encode()
 digest=hashlib.sha256(raw).hexdigest()

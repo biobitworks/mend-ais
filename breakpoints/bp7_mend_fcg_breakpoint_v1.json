@@ -4,8 +4,8 @@
   "root_kind": "MEND_FCG_MERKLE_V1",
   "hash_algorithm": "SHA-256",
   "parent_breakpoint_id": "MEND_RELEASE_BREAKPOINT_V1",
-  "parent_root_sha256": "2fabc1616bebe86dc0a7872dc38580f3c3b8df1ac3a6ed097f6d5cd1174b5602",
-  "git_commit_if_available": "c33da1460fdd0c89a239dac26eb76b9326ad5dbc",
+  "parent_root_sha256": "270616cea4872be7f359b505a89fe4b18e2736e92f9026d457bea7695bc31b38",
+  "git_commit_if_available": "cdd46be2588e8f4f4af2fcb43302fc9d25d82cc5",
   "canonical_leaf_count": 13,
   "canonical_leaf_order": "lexicographic logical_path",
   "canonicalization": "raw file bytes; SHA-256 lowercase hex",
@@ -16,23 +16,23 @@
     {
       "logical_path": "fcg/successor_fcg.json",
       "artifact_type": "MEND_FCG_MERKLE_V1",
-      "bytes": 5910,
-      "file_sha256": "e0c3edff33269475fea30d6eaead7317f11da671a70b9f79e875b8314a527576",
-      "leaf_sha256": "44ab8c6b93f119181b4b09b38e87ab7d4beb9c66de2735cb2a1590c0ee556bac"
+      "bytes": 5909,
+      "file_sha256": "e1688c12e7c1f8e61ce81ab6265a045d1faf808016bfb9a8de35ae8221a2a864",
+      "leaf_sha256": "bfcb3af84265080b3020bd8187bff7aa441c755770ee9a80945f3ef7dd9d38cb"
     },
     {
       "logical_path": "fco/antigence_verification.json",
       "artifact_type": "MEND_FCG_MERKLE_V1",
-      "bytes": 2052,
-      "file_sha256": "cc329b66a2d9d5c03e0c449880abdd309a989b88a73991c48fd678ce215b6db4",
-      "leaf_sha256": "d47b807512c2382f79e8b0667a6c2270168460683c31e6813ea490e523fc770e"
+      "bytes": 2050,
+      "file_sha256": "ad1eec4b94be2db7c6f56908a231e5c4ee4fc95d56fab907fa84709e28299492",
+      "leaf_sha256": "b6f604240f5f3cdaf186ab0255707d6641607416dc1dfd05492f6b2e35e82a8c"
     },
     {
       "logical_path": "fco/breakpoint.json",
       "artifact_type": "MEND_FCG_MERKLE_V1",
       "bytes": 1164,
-      "file_sha256": "0d7647a58d5912646f28a2d430fdda07f99bab0ecbdc7e09524a13039d4b7069",
-      "leaf_sha256": "e2c07787c5bcd4907e4c961ea2e3dd515844a21e5e1b67d9938f5ad93d9044e1"
+      "file_sha256": "d45618d133d44ad0c466422cdac95f63f467f1870fcf95fbba5bcfe0ddf9d432",
+      "leaf_sha256": "bb22768d47e94fdb3966d5827f65522e732f925679df4e36c7f9cca113a2ed98"
     },
     {
       "logical_path": "fco/data_atom.json",
@@ -72,16 +72,16 @@
     {
       "logical_path": "fco/release.json",
       "artifact_type": "MEND_FCG_MERKLE_V1",
-      "bytes": 1696,
-      "file_sha256": "b362e795ad87661889d78a6dfa041009f8e5e5fd16a01d04a924b76c70b18521",
-      "leaf_sha256": "b78188d32e16ed524b62288227e6a982f80b3d3b3b5a1ea56cdb733646b39d28"
+      "bytes": 1695,
+      "file_sha256": "cf06d57f90ee84568a0f0ad01c5ba81d5a9d6f50c4d5475695374a6d83f1d940",
+      "leaf_sha256": "675979c73e2acef9b3c48231be60518de917c3c542b344076014d790b755d4bb"
     },
     {
       "logical_path": "fco/release_decision.json",
       "artifact_type": "MEND_FCG_MERKLE_V1",
-      "bytes": 1281,
-      "file_sha256": "e19390c07ea9a531ebd0cc76b9e09a4a4f8e5a939433ee46bb665e40a5dacbff",
-      "leaf_sha256": "2c671527753fd06b8133b623ac8944b0b9f30b2c277134819e5f42f3dcc61c0e"
+      "bytes": 1372,
+      "file_sha256": "2b8a6fa74efb406d730627500adaa3f3adc321f9d626f8953a92e515ad06f2f7",
+      "leaf_sha256": "0fa2a787afa8d6798babba3401a87c66ff592dd80bbe7f301a591df82be4089f"
     },
     {
       "logical_path": "fco/source.json",
@@ -105,7 +105,7 @@
       "leaf_sha256": "01651343947bd1a793f10f854fb7270cfbebe8c54a5606f721b7a9f3b51d4e19"
     }
   ],
-  "merkle_root_sha256": "77f2249e437d7ae52238b2970880a5787e1cce4d889eb51bc59c90d4982cfd2e",
+  "merkle_root_sha256": "05c0b73ccae8a74eedbd71fe64ca1a5d378847aed81dca03c0d1e4b304778aca",
   "execution_state": "OBSERVED",
   "scope_note": "Sequential checkpoint BP7; only artifacts available at this phase.",
   "claim_boundary": "Integrity of declared leaves only; not scientific truth, causal proof, clinical validity, security completeness, or regulatory compliance."

@@ -4,8 +4,8 @@
   "root_kind": "MEND_RELEASE_MERKLE_V1",
   "hash_algorithm": "SHA-256",
   "parent_breakpoint_id": "MEND_VERIFICATION_BREAKPOINT_V1",
-  "parent_root_sha256": "7f4450994bdc080a5f91c98b4ace1875a11eba5b516fe51702b3c7151ffc8d97",
-  "git_commit_if_available": "c33da1460fdd0c89a239dac26eb76b9326ad5dbc",
+  "parent_root_sha256": "33f4093141250da2de7d3b78a6f6d1bd50467a950c081bae0c3cad64ebaec303",
+  "git_commit_if_available": "cdd46be2588e8f4f4af2fcb43302fc9d25d82cc5",
   "canonical_leaf_count": 3,
   "canonical_leaf_order": "lexicographic logical_path",
   "canonicalization": "raw file bytes; SHA-256 lowercase hex",
@@ -16,16 +16,16 @@
     {
       "logical_path": "fco/release.json",
       "artifact_type": "MEND_RELEASE_MERKLE_V1",
-      "bytes": 1696,
-      "file_sha256": "b362e795ad87661889d78a6dfa041009f8e5e5fd16a01d04a924b76c70b18521",
-      "leaf_sha256": "b78188d32e16ed524b62288227e6a982f80b3d3b3b5a1ea56cdb733646b39d28"
+      "bytes": 1695,
+      "file_sha256": "cf06d57f90ee84568a0f0ad01c5ba81d5a9d6f50c4d5475695374a6d83f1d940",
+      "leaf_sha256": "675979c73e2acef9b3c48231be60518de917c3c542b344076014d790b755d4bb"
     },
     {
       "logical_path": "fco/release_decision.json",
       "artifact_type": "MEND_RELEASE_MERKLE_V1",
-      "bytes": 1281,
-      "file_sha256": "e19390c07ea9a531ebd0cc76b9e09a4a4f8e5a939433ee46bb665e40a5dacbff",
-      "leaf_sha256": "2c671527753fd06b8133b623ac8944b0b9f30b2c277134819e5f42f3dcc61c0e"
+      "bytes": 1372,
+      "file_sha256": "2b8a6fa74efb406d730627500adaa3f3adc321f9d626f8953a92e515ad06f2f7",
+      "leaf_sha256": "0fa2a787afa8d6798babba3401a87c66ff592dd80bbe7f301a591df82be4089f"
     },
     {
       "logical_path": "receipts/egress_test.json",
@@ -35,7 +35,7 @@
       "leaf_sha256": "4999a9881dbd2b52a9cadf69b8fb55f753ac30486459ded389b57f81de1a6de2"
     }
   ],
-  "merkle_root_sha256": "2fabc1616bebe86dc0a7872dc38580f3c3b8df1ac3a6ed097f6d5cd1174b5602",
+  "merkle_root_sha256": "270616cea4872be7f359b505a89fe4b18e2736e92f9026d457bea7695bc31b38",
   "execution_state": "OBSERVED",
   "scope_note": "Sequential checkpoint BP6; only artifacts available at this phase.",
   "claim_boundary": "Integrity of declared leaves only; not scientific truth, causal proof, clinical validity, security completeness, or regulatory compliance."

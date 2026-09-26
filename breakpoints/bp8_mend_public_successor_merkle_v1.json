@@ -4,9 +4,9 @@
   "root_kind": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
   "hash_algorithm": "SHA-256",
   "parent_breakpoint_id": "MEND_FCG_BREAKPOINT_V1",
-  "parent_root_sha256": "77f2249e437d7ae52238b2970880a5787e1cce4d889eb51bc59c90d4982cfd2e",
-  "git_commit_if_available": "4dc111c09e2dd62d40a6fb02e4fd694e3b6f0f18",
-  "canonical_leaf_count": 61,
+  "parent_root_sha256": "05c0b73ccae8a74eedbd71fe64ca1a5d378847aed81dca03c0d1e4b304778aca",
+  "git_commit_if_available": "cdd46be2588e8f4f4af2fcb43302fc9d25d82cc5",
+  "canonical_leaf_count": 62,
   "canonical_leaf_order": "lexicographic logical_path",
   "canonicalization": "raw file bytes; SHA-256 lowercase hex",
   "leaf_preimage_definition": "b'mend-fco-leaf-v1\\0' || UTF8(logical_path) || NUL || ASCII(file_sha256_hex)",
@@ -87,22 +87,22 @@
       "logical_path": "breakpoints/bp5_mend_verification_breakpoint_v1.json",
       "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
       "bytes": 1841,
-      "file_sha256": "125ef86342d0b357d6c35f5da98f8fe112e0b48e96d3cc37a70d1b978b5d1386",
-      "leaf_sha256": "98c0189998a442e2fcc3d5f0c910aa1f808436c26eadc41c2254aa7284053a78"
+      "file_sha256": "c88b14593ae2f8234e7e0df6834c691b2750dc50254ce4c73887c0a7852cef82",
+      "leaf_sha256": "7c276a08c384b89929b756e16e2134afb847ed095bee25e9f405a5139d60e15e"
     },
     {
       "logical_path": "breakpoints/bp6_mend_release_breakpoint_v1.json",
       "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
       "bytes": 2117,
-      "file_sha256": "71167fc175377820f6bd5516d617dd4bb703da026dccfb44d103bb79795a2b47",
-      "leaf_sha256": "1769414299acd3cd8bcab2189700df0e3b32a3245204b47d546a9275f020581c"
+      "file_sha256": "84eb31cb0304611991119a5326bf62c2e2c7d46aad15875f92a59dee54cc2202",
+      "leaf_sha256": "fed991084546bc012419c8648cb26e74baed2ff74106a41f5f84d461fd6c8ad1"
     },
     {
       "logical_path": "breakpoints/bp7_mend_fcg_breakpoint_v1.json",
       "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
       "bytes": 5126,
-      "file_sha256": "ef936b451a4dc73b2c09bb09d0475c9b8e69bad308d5cbb691d1421dc54ce54f",
-      "leaf_sha256": "601f7bfc62bf69a5e14170f9247aa96d9b8141ab2c7da21d23812bf617aa7422"
+      "file_sha256": "af43ca263b02a617cbed5497991bced8fc57c6421654193118084350baf6f9ae",
+      "leaf_sha256": "3973bfb0527e90427a14383f2edb0f12d6847edc552fc3b1f3d7be689994fd6d"
     },
     {
       "logical_path": "breakpoints/mend_core_breakpoint_v1.json",
@@ -149,23 +149,23 @@
     {
       "logical_path": "fcg/successor_fcg.json",
       "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
-      "bytes": 5910,
-      "file_sha256": "e0c3edff33269475fea30d6eaead7317f11da671a70b9f79e875b8314a527576",
-      "leaf_sha256": "44ab8c6b93f119181b4b09b38e87ab7d4beb9c66de2735cb2a1590c0ee556bac"
+      "bytes": 5909,
+      "file_sha256": "e1688c12e7c1f8e61ce81ab6265a045d1faf808016bfb9a8de35ae8221a2a864",
+      "leaf_sha256": "bfcb3af84265080b3020bd8187bff7aa441c755770ee9a80945f3ef7dd9d38cb"
     },
     {
       "logical_path": "fco/antigence_verification.json",
       "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
-      "bytes": 2052,
-      "file_sha256": "cc329b66a2d9d5c03e0c449880abdd309a989b88a73991c48fd678ce215b6db4",
-      "leaf_sha256": "d47b807512c2382f79e8b0667a6c2270168460683c31e6813ea490e523fc770e"
+      "bytes": 2050,
+      "file_sha256": "ad1eec4b94be2db7c6f56908a231e5c4ee4fc95d56fab907fa84709e28299492",
+      "leaf_sha256": "b6f604240f5f3cdaf186ab0255707d6641607416dc1dfd05492f6b2e35e82a8c"
     },
     {
       "logical_path": "fco/breakpoint.json",
       "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
       "bytes": 1164,
-      "file_sha256": "0d7647a58d5912646f28a2d430fdda07f99bab0ecbdc7e09524a13039d4b7069",
-      "leaf_sha256": "e2c07787c5bcd4907e4c961ea2e3dd515844a21e5e1b67d9938f5ad93d9044e1"
+      "file_sha256": "d45618d133d44ad0c466422cdac95f63f467f1870fcf95fbba5bcfe0ddf9d432",
+      "leaf_sha256": "bb22768d47e94fdb3966d5827f65522e732f925679df4e36c7f9cca113a2ed98"
     },
     {
       "logical_path": "fco/data_atom.json",
@@ -205,16 +205,16 @@
     {
       "logical_path": "fco/release.json",
       "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
-      "bytes": 1696,
-      "file_sha256": "b362e795ad87661889d78a6dfa041009f8e5e5fd16a01d04a924b76c70b18521",
-      "leaf_sha256": "b78188d32e16ed524b62288227e6a982f80b3d3b3b5a1ea56cdb733646b39d28"
+      "bytes": 1695,
+      "file_sha256": "cf06d57f90ee84568a0f0ad01c5ba81d5a9d6f50c4d5475695374a6d83f1d940",
+      "leaf_sha256": "675979c73e2acef9b3c48231be60518de917c3c542b344076014d790b755d4bb"
     },
     {
       "logical_path": "fco/release_decision.json",
       "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
-      "bytes": 1281,
-      "file_sha256": "e19390c07ea9a531ebd0cc76b9e09a4a4f8e5a939433ee46bb665e40a5dacbff",
-      "leaf_sha256": "2c671527753fd06b8133b623ac8944b0b9f30b2c277134819e5f42f3dcc61c0e"
+      "bytes": 1372,
+      "file_sha256": "2b8a6fa74efb406d730627500adaa3f3adc321f9d626f8953a92e515ad06f2f7",
+      "leaf_sha256": "0fa2a787afa8d6798babba3401a87c66ff592dd80bbe7f301a591df82be4089f"
     },
     {
       "logical_path": "fco/source.json",
@@ -282,9 +282,9 @@
     {
       "logical_path": "scripts/bind_antigence_receipt.py",
       "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
-      "bytes": 1048,
-      "file_sha256": "a765171a744bcbc9c058fa13bf262aa2fced0564f83ff3be7883a3b0793517f0",
-      "leaf_sha256": "756bde4ce1d11686cd58af8ba4ca6b405c0c69696251e8f17d8dd64942d4abad"
+      "bytes": 1176,
+      "file_sha256": "29a3570225cde2476572c5619f7d25f346b1c6fadcb9aaefb162490e6d4d3b43",
+      "leaf_sha256": "0c4fe5f3b633cb64a63c29cbb497103259b9bc73492f38163ac3ec092cd57e6d"
     },
     {
       "logical_path": "scripts/create_breakpoint.py",
@@ -320,6 +320,13 @@
       "bytes": 1915,
       "file_sha256": "8451feab4d1953d2a3e93ebd98cc84703a27f6d15f68b73f41ee359246e52031",
       "leaf_sha256": "99bcc22338849d4b73c62c438a67aabdb73b97665c21965e864bd6a6d1fb451b"
+    },
+    {
+      "logical_path": "scripts/reconcile_antigence_state.py",
+      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
+      "bytes": 1969,
+      "file_sha256": "3982507c6dd1df8ac963c49762d3f3b4eee9c579fe7106977695800919cfab24",
+      "leaf_sha256": "b9fc76b4a88d8b8a6572b45b3754b86744ff797b25ccca43f585c795526d1798"
     },
     {
       "logical_path": "scripts/run_antigence_adapter.py",
@@ -441,7 +448,7 @@
       "leaf_sha256": "1e1619deaa63cde4922cd3aa2e6a1b77a2bcf74e0862d014036d86dc0aa1c21f"
     }
   ],
-  "merkle_root_sha256": "1907ca89b88930f13596da35c685cd75d075eb888dbea3833002bddd1617175a",
+  "merkle_root_sha256": "091d944a71f7abe5cd3880f746877f329cf740dc6e04e26d51099c25d474dfea",
   "execution_state": "SUPPORTED",
   "scope_note": "Public-safe successor artifact set finalized after tests and scans.",
   "claim_boundary": "Integrity of declared leaves only; not scientific truth, causal proof, clinical validity, security completeness, or regulatory compliance."

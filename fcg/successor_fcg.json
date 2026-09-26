@@ -38,28 +38,28 @@
       "content_sha256": "88b65774fb6a029d52265eb42cd19b60d9a473c769a525be948dfa374a155f55"
     },
     {
-      "fco_id": "fco_8b9d979c734930c62d10eaa7992bffc21c80290f32c8947fe9b04b8af318265b",
+      "fco_id": "fco_36eb6f0166ecb92732229316005ddbd81bd9458c2e6690c9f68b175499a3923b",
       "fco_type": "ANTIGENCE_VERIFICATION_FCO",
-      "execution_state": "SUPPORTED",
-      "content_sha256": "8b9d979c734930c62d10eaa7992bffc21c80290f32c8947fe9b04b8af318265b"
+      "execution_state": "NEGATIVE",
+      "content_sha256": "36eb6f0166ecb92732229316005ddbd81bd9458c2e6690c9f68b175499a3923b"
     },
     {
-      "fco_id": "fco_d05b599ed1828abe72858f69f95d8514dd3a211f3f47292156f63d446dcd26a5",
+      "fco_id": "fco_612f8a006034e1621129291e44ca28d4988ba5a0f1cad81d06961e2cc59ce15d",
       "fco_type": "RELEASE_DECISION_FCO",
       "execution_state": "SUPPORTED",
-      "content_sha256": "d05b599ed1828abe72858f69f95d8514dd3a211f3f47292156f63d446dcd26a5"
+      "content_sha256": "612f8a006034e1621129291e44ca28d4988ba5a0f1cad81d06961e2cc59ce15d"
     },
     {
-      "fco_id": "fco_e286e06c4ecaa567a2bda36a2490ea3bd30e6afa9a31633baf2ad02235ceffba",
+      "fco_id": "fco_d2d5406cae5e72b1f8f5a23ef8f641f3a587985fcb94115432cfd74db0f1c5ad",
       "fco_type": "RELEASE_FCO",
       "execution_state": "SUPPORTED",
-      "content_sha256": "e286e06c4ecaa567a2bda36a2490ea3bd30e6afa9a31633baf2ad02235ceffba"
+      "content_sha256": "d2d5406cae5e72b1f8f5a23ef8f641f3a587985fcb94115432cfd74db0f1c5ad"
     },
     {
-      "fco_id": "fco_b16dd1ad95bf12da4e07d21d74d5d3b60e9312e25a2161cbbaa3f854fb135ab9",
+      "fco_id": "fco_1f002e9c6c4314e5c30af4d8f0a11dfb07be7c59896c14264e26e9509ad373e0",
       "fco_type": "BREAKPOINT_FCO",
       "execution_state": "OBSERVED",
-      "content_sha256": "b16dd1ad95bf12da4e07d21d74d5d3b60e9312e25a2161cbbaa3f854fb135ab9"
+      "content_sha256": "1f002e9c6c4314e5c30af4d8f0a11dfb07be7c59896c14264e26e9509ad373e0"
     }
   ],
   "edges": [
@@ -101,30 +101,30 @@
     {
       "source": "fco_88b65774fb6a029d52265eb42cd19b60d9a473c769a525be948dfa374a155f55",
       "type": "VERIFIED_BY",
-      "target": "fco_8b9d979c734930c62d10eaa7992bffc21c80290f32c8947fe9b04b8af318265b"
+      "target": "fco_36eb6f0166ecb92732229316005ddbd81bd9458c2e6690c9f68b175499a3923b"
     },
     {
-      "source": "fco_8b9d979c734930c62d10eaa7992bffc21c80290f32c8947fe9b04b8af318265b",
+      "source": "fco_36eb6f0166ecb92732229316005ddbd81bd9458c2e6690c9f68b175499a3923b",
       "type": "CHALLENGED_BY",
       "target": "fco_88b65774fb6a029d52265eb42cd19b60d9a473c769a525be948dfa374a155f55"
     },
     {
-      "source": "fco_8b9d979c734930c62d10eaa7992bffc21c80290f32c8947fe9b04b8af318265b",
+      "source": "fco_36eb6f0166ecb92732229316005ddbd81bd9458c2e6690c9f68b175499a3923b",
       "type": "AUTHORIZED_BY",
-      "target": "fco_d05b599ed1828abe72858f69f95d8514dd3a211f3f47292156f63d446dcd26a5"
+      "target": "fco_612f8a006034e1621129291e44ca28d4988ba5a0f1cad81d06961e2cc59ce15d"
     },
     {
-      "source": "fco_d05b599ed1828abe72858f69f95d8514dd3a211f3f47292156f63d446dcd26a5",
+      "source": "fco_612f8a006034e1621129291e44ca28d4988ba5a0f1cad81d06961e2cc59ce15d",
       "type": "RELEASED_AS",
-      "target": "fco_e286e06c4ecaa567a2bda36a2490ea3bd30e6afa9a31633baf2ad02235ceffba"
+      "target": "fco_d2d5406cae5e72b1f8f5a23ef8f641f3a587985fcb94115432cfd74db0f1c5ad"
     },
     {
-      "source": "fco_e286e06c4ecaa567a2bda36a2490ea3bd30e6afa9a31633baf2ad02235ceffba",
+      "source": "fco_d2d5406cae5e72b1f8f5a23ef8f641f3a587985fcb94115432cfd74db0f1c5ad",
       "type": "SEALED_BY",
-      "target": "fco_b16dd1ad95bf12da4e07d21d74d5d3b60e9312e25a2161cbbaa3f854fb135ab9"
+      "target": "fco_1f002e9c6c4314e5c30af4d8f0a11dfb07be7c59896c14264e26e9509ad373e0"
     },
     {
-      "source": "fco_b16dd1ad95bf12da4e07d21d74d5d3b60e9312e25a2161cbbaa3f854fb135ab9",
+      "source": "fco_1f002e9c6c4314e5c30af4d8f0a11dfb07be7c59896c14264e26e9509ad373e0",
       "type": "SUCCESSOR_OF",
       "target": "MEND_CORE_20260926_B1"
     }

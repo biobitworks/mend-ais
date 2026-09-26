@@ -1,6 +1,6 @@
 {
-  "fco_id": "fco_e286e06c4ecaa567a2bda36a2490ea3bd30e6afa9a31633baf2ad02235ceffba",
-  "content_sha256": "e286e06c4ecaa567a2bda36a2490ea3bd30e6afa9a31633baf2ad02235ceffba",
+  "fco_id": "fco_d2d5406cae5e72b1f8f5a23ef8f641f3a587985fcb94115432cfd74db0f1c5ad",
+  "content_sha256": "d2d5406cae5e72b1f8f5a23ef8f641f3a587985fcb94115432cfd74db0f1c5ad",
   "fco_type": "RELEASE_FCO",
   "canonicalization": "RFC8785-like JSON: UTF-8, sorted keys, separators comma/colon, ensure_ascii=false",
   "execution_state": "SUPPORTED",
@@ -11,7 +11,7 @@
     "claim_boundary": "Probabilistic advisory over synthetic data; not clinical guidance."
   },
   "parent_fco_ids": [
-    "fco_d05b599ed1828abe72858f69f95d8514dd3a211f3f47292156f63d446dcd26a5"
+    "fco_612f8a006034e1621129291e44ca28d4988ba5a0f1cad81d06961e2cc59ce15d"
   ],
   "purpose": "research",
   "sensitivity_class": "PUBLIC_SYNTHETIC_OUTPUT",
@@ -21,11 +21,11 @@
   "model_id": "NULL",
   "input_sha256": "166ae30f5e902b6e39c5fd7249daacec6a8b4927b04ca894cce9401a3b248f09",
   "result_sha256": "a131c82ec6f0ee931b8ebc7172b0b3949137f6f2610bcd887bc3b33d8b9f127e",
-  "verification_state": "SUPPORTED",
+  "verification_state": "NEGATIVE",
   "release_state": "SUPPORTED",
   "policy_ref": "MEND_SYNTHETIC_RESEARCH_RELEASE_V1",
   "provenance_refs": [
-    "fco_d05b599ed1828abe72858f69f95d8514dd3a211f3f47292156f63d446dcd26a5",
+    "fco_612f8a006034e1621129291e44ca28d4988ba5a0f1cad81d06961e2cc59ce15d",
     "fco_88b65774fb6a029d52265eb42cd19b60d9a473c769a525be948dfa374a155f55"
   ],
   "breakpoint_ref": "NOT_COMPUTED"
