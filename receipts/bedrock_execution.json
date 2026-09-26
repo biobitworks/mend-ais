@@ -1,0 +1,16 @@
+{
+  "schema_version": "mend.bedrock.receipt.v1",
+  "provider": "AMAZON_BEDROCK",
+  "region": "us-east-1",
+  "model_id": "amazon.nova-micro-v1:0",
+  "inference_profile_id": "us.amazon.nova-micro-v1:0",
+  "execution_state": "EXECUTED",
+  "request_sha256": "ef6fee54fd55ebc45a3254b3974fb998fb429fc925c6735a74634a8f44128b6e",
+  "result_sha256": "166ae30f5e902b6e39c5fd7249daacec6a8b4927b04ca894cce9401a3b248f09",
+  "latency_ms": 1178,
+  "usage": {
+    "inputTokens": 118,
+    "outputTokens": 46,
+    "totalTokens": 164
+  }
+}

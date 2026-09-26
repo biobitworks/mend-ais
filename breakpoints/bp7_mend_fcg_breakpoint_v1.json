@@ -1,0 +1,112 @@
+{
+  "schema_version": "mend.breakpoint.v2",
+  "breakpoint_id": "MEND_FCG_BREAKPOINT_V1",
+  "root_kind": "MEND_FCG_MERKLE_V1",
+  "hash_algorithm": "SHA-256",
+  "parent_breakpoint_id": "MEND_RELEASE_BREAKPOINT_V1",
+  "parent_root_sha256": "2fabc1616bebe86dc0a7872dc38580f3c3b8df1ac3a6ed097f6d5cd1174b5602",
+  "git_commit_if_available": "c33da1460fdd0c89a239dac26eb76b9326ad5dbc",
+  "canonical_leaf_count": 13,
+  "canonical_leaf_order": "lexicographic logical_path",
+  "canonicalization": "raw file bytes; SHA-256 lowercase hex",
+  "leaf_preimage_definition": "b'mend-fco-leaf-v1\\0' || UTF8(logical_path) || NUL || ASCII(file_sha256_hex)",
+  "node_preimage_definition": "b'mend-fco-node-v1\\0' || left_digest_bytes || right_digest_bytes",
+  "odd_node_rule": "duplicate final node",
+  "canonical_leaves": [
+    {
+      "logical_path": "fcg/successor_fcg.json",
+      "artifact_type": "MEND_FCG_MERKLE_V1",
+      "bytes": 5910,
+      "file_sha256": "e0c3edff33269475fea30d6eaead7317f11da671a70b9f79e875b8314a527576",
+      "leaf_sha256": "44ab8c6b93f119181b4b09b38e87ab7d4beb9c66de2735cb2a1590c0ee556bac"
+    },
+    {
+      "logical_path": "fco/antigence_verification.json",
+      "artifact_type": "MEND_FCG_MERKLE_V1",
+      "bytes": 2052,
+      "file_sha256": "cc329b66a2d9d5c03e0c449880abdd309a989b88a73991c48fd678ce215b6db4",
+      "leaf_sha256": "d47b807512c2382f79e8b0667a6c2270168460683c31e6813ea490e523fc770e"
+    },
+    {
+      "logical_path": "fco/breakpoint.json",
+      "artifact_type": "MEND_FCG_MERKLE_V1",
+      "bytes": 1164,
+      "file_sha256": "0d7647a58d5912646f28a2d430fdda07f99bab0ecbdc7e09524a13039d4b7069",
+      "leaf_sha256": "e2c07787c5bcd4907e4c961ea2e3dd515844a21e5e1b67d9938f5ad93d9044e1"
+    },
+    {
+      "logical_path": "fco/data_atom.json",
+      "artifact_type": "MEND_FCG_MERKLE_V1",
+      "bytes": 1445,
+      "file_sha256": "7eb61a7d03caa4e218201fe3ee414226841d4121174fc5af2547c557e81db4af",
+      "leaf_sha256": "ffa22f0f5a1ff9f1d9272d2254f18e1967651a3fc2eaf06ab1113b05c1e57db1"
+    },
+    {
+      "logical_path": "fco/model_execution.json",
+      "artifact_type": "MEND_FCG_MERKLE_V1",
+      "bytes": 1901,
+      "file_sha256": "bb080a77024926cc5d254d41b3c6fec03714a740eb571c5de691d6a41442eb26",
+      "leaf_sha256": "3aa4f0e248a154c63d1e59d4277e09ac5660ee7ec04530b839c5ce75a5dbbde9"
+    },
+    {
+      "logical_path": "fco/model_request.json",
+      "artifact_type": "MEND_FCG_MERKLE_V1",
+      "bytes": 1758,
+      "file_sha256": "8a4220712382fb3ce98f992c95ef323fbcb96d1480749e0649b84da89fb3b925",
+      "leaf_sha256": "52880962fba54c61b518320b4d409460d45a1eb78563c4c08db3de1779d13769"
+    },
+    {
+      "logical_path": "fco/model_result.json",
+      "artifact_type": "MEND_FCG_MERKLE_V1",
+      "bytes": 1917,
+      "file_sha256": "a3aa744f0436064825c51fb756b3c332aaec7d8ed8e9ff2511903e5eae608e2c",
+      "leaf_sha256": "430280048be00bbdc94570c2102dba132346ccac94110a05b162ae525d33e746"
+    },
+    {
+      "logical_path": "fco/model_route.json",
+      "artifact_type": "MEND_FCG_MERKLE_V1",
+      "bytes": 2204,
+      "file_sha256": "daadede1fe7c3499686fae513487fbc2abb9eecd9eb0433e1a111d65f9cb1182",
+      "leaf_sha256": "42fc00acf738024662715b5be9b711302ddac6163e4c6cbecca480585e90be2b"
+    },
+    {
+      "logical_path": "fco/release.json",
+      "artifact_type": "MEND_FCG_MERKLE_V1",
+      "bytes": 1696,
+      "file_sha256": "b362e795ad87661889d78a6dfa041009f8e5e5fd16a01d04a924b76c70b18521",
+      "leaf_sha256": "b78188d32e16ed524b62288227e6a982f80b3d3b3b5a1ea56cdb733646b39d28"
+    },
+    {
+      "logical_path": "fco/release_decision.json",
+      "artifact_type": "MEND_FCG_MERKLE_V1",
+      "bytes": 1281,
+      "file_sha256": "e19390c07ea9a531ebd0cc76b9e09a4a4f8e5a939433ee46bb665e40a5dacbff",
+      "leaf_sha256": "2c671527753fd06b8133b623ac8944b0b9f30b2c277134819e5f42f3dcc61c0e"
+    },
+    {
+      "logical_path": "fco/source.json",
+      "artifact_type": "MEND_FCG_MERKLE_V1",
+      "bytes": 1265,
+      "file_sha256": "8dea05bb3e5bfc4ad9a292942429eb6d5bbec5356edb5963347229cb667a7f1f",
+      "leaf_sha256": "0ec2345ca725e311fdf4c7874fcdae92ec411cd3c44d80c2edfe2c307e208b9a"
+    },
+    {
+      "logical_path": "schemas/fcg.schema.json",
+      "artifact_type": "MEND_FCG_MERKLE_V1",
+      "bytes": 759,
+      "file_sha256": "4a23f2d6d6d8815b2fb3ebdb8f3333fa9acea9a6ad6623b9052e66ecf4feeb67",
+      "leaf_sha256": "c7cbfdee46a58dfc885933f0076b731d9e52a8e36782d21f4b07ea65c9ee24c7"
+    },
+    {
+      "logical_path": "schemas/fco.schema.json",
+      "artifact_type": "MEND_FCG_MERKLE_V1",
+      "bytes": 1584,
+      "file_sha256": "79fd55c37f880ebbcbf892a819ff6ea8e49b7211b2a7482c287b02dcf6b01a1b",
+      "leaf_sha256": "01651343947bd1a793f10f854fb7270cfbebe8c54a5606f721b7a9f3b51d4e19"
+    }
+  ],
+  "merkle_root_sha256": "77f2249e437d7ae52238b2970880a5787e1cce4d889eb51bc59c90d4982cfd2e",
+  "execution_state": "OBSERVED",
+  "scope_note": "Sequential checkpoint BP7; only artifacts available at this phase.",
+  "claim_boundary": "Integrity of declared leaves only; not scientific truth, causal proof, clinical validity, security completeness, or regulatory compliance."
+}

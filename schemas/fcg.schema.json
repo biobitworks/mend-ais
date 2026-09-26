@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mend.example/schemas/fcg.schema.json",
+  "title": "Mend Fractal Custody Graph",
+  "type": "object",
+  "required": ["schema_version", "nodes", "edges"],
+  "properties": {
+    "schema_version": {"const": "mend.fcg.v2"},
+    "nodes": {"type": "array", "items": {"type": "object", "required": ["fco_id", "fco_type", "execution_state"]}},
+    "edges": {"type": "array", "items": {"type": "object", "required": ["source", "type", "target"], "properties": {"type": {"enum": ["DERIVED_FROM", "HAS_ATOM", "REQUESTED", "ROUTED_BY", "ROUTED_TO", "EXECUTED_BY", "PRODUCED", "VERIFIED_BY", "CHALLENGED_BY", "AUTHORIZED_BY", "BLOCKED_BY", "RELEASED_AS", "SUCCESSOR_OF", "SEALED_BY"]}}}
+  }
+}

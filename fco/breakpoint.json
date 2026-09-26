@@ -1,0 +1,29 @@
+{
+  "fco_id": "fco_b16dd1ad95bf12da4e07d21d74d5d3b60e9312e25a2161cbbaa3f854fb135ab9",
+  "content_sha256": "b16dd1ad95bf12da4e07d21d74d5d3b60e9312e25a2161cbbaa3f854fb135ab9",
+  "fco_type": "BREAKPOINT_FCO",
+  "canonicalization": "RFC8785-like JSON: UTF-8, sorted keys, separators comma/colon, ensure_ascii=false",
+  "execution_state": "OBSERVED",
+  "payload": {
+    "breakpoint_id": "MEND_RELEASE_BREAKPOINT_V1",
+    "merkle_root_sha256": "2fabc1616bebe86dc0a7872dc38580f3c3b8df1ac3a6ed097f6d5cd1174b5602",
+    "leaf_count": 3
+  },
+  "parent_fco_ids": [
+    "fco_e286e06c4ecaa567a2bda36a2490ea3bd30e6afa9a31633baf2ad02235ceffba"
+  ],
+  "purpose": "research",
+  "sensitivity_class": "PUBLIC_SYNTHETIC_OUTPUT",
+  "transformation": "MERKLE_SEAL",
+  "executor": "MEND_BREAKPOINT_ENGINE_V1",
+  "provider": "LOCAL",
+  "model_id": "NULL",
+  "input_sha256": "e286e06c4ecaa567a2bda36a2490ea3bd30e6afa9a31633baf2ad02235ceffba",
+  "verification_state": "SUPPORTED",
+  "release_state": "SUPPORTED",
+  "policy_ref": "MEND_BREAKPOINT_POLICY_V1",
+  "provenance_refs": [
+    "breakpoints/bp6_mend_release_breakpoint_v1.json"
+  ],
+  "breakpoint_ref": "MEND_RELEASE_BREAKPOINT_V1"
+}
