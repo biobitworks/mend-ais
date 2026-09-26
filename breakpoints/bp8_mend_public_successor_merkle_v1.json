@@ -5,21 +5,14 @@
   "hash_algorithm": "SHA-256",
   "parent_breakpoint_id": "MEND_FCG_BREAKPOINT_V1",
   "parent_root_sha256": "77f2249e437d7ae52238b2970880a5787e1cce4d889eb51bc59c90d4982cfd2e",
-  "git_commit_if_available": "c33da1460fdd0c89a239dac26eb76b9326ad5dbc",
-  "canonical_leaf_count": 63,
+  "git_commit_if_available": "4dc111c09e2dd62d40a6fb02e4fd694e3b6f0f18",
+  "canonical_leaf_count": 61,
   "canonical_leaf_order": "lexicographic logical_path",
   "canonicalization": "raw file bytes; SHA-256 lowercase hex",
   "leaf_preimage_definition": "b'mend-fco-leaf-v1\\0' || UTF8(logical_path) || NUL || ASCII(file_sha256_hex)",
   "node_preimage_definition": "b'mend-fco-node-v1\\0' || left_digest_bytes || right_digest_bytes",
   "odd_node_rule": "duplicate final node",
   "canonical_leaves": [
-    {
-      "logical_path": ".DS_Store",
-      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
-      "bytes": 8196,
-      "file_sha256": "6a41a8d88263de4cc352c6b676a43b1227d751b121c1ec0555aa483636498ba2",
-      "leaf_sha256": "363ec2b04c349cf9b22b269f1967cc486a691e2b2882938971c68a7993dd04f9"
-    },
     {
       "logical_path": ".gitignore",
       "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
@@ -303,9 +296,9 @@
     {
       "logical_path": "scripts/create_public_successor_breakpoint.py",
       "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
-      "bytes": 2339,
-      "file_sha256": "aeb4c9a421c2cc1d8b69973cba64662414c98e962811ec4fa1a496c7f8b41b61",
-      "leaf_sha256": "70807057b8051a2264f264dff0e57919515770ba8481fb14d000f4ade83715d5"
+      "bytes": 2367,
+      "file_sha256": "9638e442c9bc712fa771911015f4cfc8f6bdecc3e03903b750a708c33100240c",
+      "leaf_sha256": "bfbee35452fb62c16eb1b28ac50fd9c68570fbdd63376a28ba3d51715af09675"
     },
     {
       "logical_path": "scripts/enroll_local_node.py",
@@ -399,13 +392,6 @@
       "leaf_sha256": "23e3b5487e9ee87236f636c6413ea4c1694eef5edea2dd41831d2404d8e71072"
     },
     {
-      "logical_path": "sdk/.DS_Store",
-      "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
-      "bytes": 6148,
-      "file_sha256": "1bf298ab67568cdf2039c5c3590693d987e610aacaf2035e2525e10136c1bd3e",
-      "leaf_sha256": "774c80268b39b8797804e9fd36f2e216c14bcbe3b5646d3eb929d6d65e030204"
-    },
-    {
       "logical_path": "sdk/js/mend-sdk.js",
       "artifact_type": "MEND_PUBLIC_SUCCESSOR_MERKLE_V1",
       "bytes": 791,
@@ -455,7 +441,7 @@
       "leaf_sha256": "1e1619deaa63cde4922cd3aa2e6a1b77a2bcf74e0862d014036d86dc0aa1c21f"
     }
   ],
-  "merkle_root_sha256": "7e91830bf0ffe616eb15feb5cf77e3e9ac01ef2dec9ad1ed0356424077f80085",
+  "merkle_root_sha256": "1907ca89b88930f13596da35c685cd75d075eb888dbea3833002bddd1617175a",
   "execution_state": "SUPPORTED",
   "scope_note": "Public-safe successor artifact set finalized after tests and scans.",
   "claim_boundary": "Integrity of declared leaves only; not scientific truth, causal proof, clinical validity, security completeness, or regulatory compliance."

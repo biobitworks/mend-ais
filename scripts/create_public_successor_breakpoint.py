@@ -7,7 +7,7 @@ parent=json.loads(next((root/"breakpoints").glob("bp7_*.json")).read_text())
 excluded={"breakpoints/bp8_mend_public_successor_merkle_v1.json"}
 paths=[]
 for path in root.rglob("*"):
- if not path.is_file() or ".git" in path.parts or "__pycache__" in path.parts: continue
+ if not path.is_file() or ".git" in path.parts or "__pycache__" in path.parts or path.name == ".DS_Store": continue
  logical=str(path.relative_to(root))
  if logical not in excluded: paths.append(logical)
 leaves=[]
