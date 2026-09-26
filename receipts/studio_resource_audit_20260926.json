@@ -1,0 +1,94 @@
+{
+  "schema_version": "mend.resource_audit.v1",
+  "observed_at": "2026-09-26T17:00:17Z",
+  "host": {
+    "name": "magicSTUDIObox",
+    "os": "macOS 27.0",
+    "arch": "arm64",
+    "desktop_commander": "online"
+  },
+  "peer_devices": {
+    "magicPRObox": "offline/not observed this turn",
+    "Samsung Galaxy S26+": "not connected/not tested this turn"
+  },
+  "core_demo_ready": true,
+  "core_dependencies": {
+    "service": "mend-ais-public-demo",
+    "status": "PASS",
+    "services": {
+      "ollama": {
+        "status": "PASS",
+        "models": [
+          "longhorizon-liquid-230m:latest",
+          "qwen2.5:0.5b"
+        ]
+      },
+      "ollarma": {
+        "status": "DEGRADED",
+        "reported_status": "degraded",
+        "effective_model": "longhorizon-liquid-230m:latest",
+        "reason_code": "SELECTION_STALE"
+      },
+      "core_model": {
+        "status": "PASS",
+        "model": "longhorizon-liquid-230m:latest"
+      }
+    },
+    "dataset_sha256": "4aaadc135a984aa9cde71c9a49cd90d85f557622148f7ca755a3251046d457ad",
+    "fcg_sha256": "c292a11f365fc99d3c8506dc84fedc0ab9338478f7f4bad7851d7dea653fe6fb"
+  },
+  "local_projects": {
+    "antigence": {
+      "head": "1f12b3c2b2f7df90e11753f74443e4add48d5b46",
+      "branch": "federation/v1.0.0b2-remediation",
+      "worktree": "DIRTY",
+      "runtime": "DEGRADED_BROKEN_VENV_SYMLINK",
+      "public_dependency": false
+    },
+    "ollarma": {
+      "head": "3f197544a376691f8265ad5ede877b3e63bfeb44",
+      "branch": "exp/fco-006-fresh-testset-prep",
+      "worktree": "CLEAN",
+      "service": "OBSERVED_127.0.0.1:8484",
+      "health": "DEGRADED_SELECTION_STALE",
+      "chat": "OBSERVED_PASS",
+      "public_dependency": false
+    },
+    "seedgraph": {
+      "head": "0652bc87d583c1e93464b848b23d0a5150d4f589",
+      "branch": "merge/main-crossmachine-20260716",
+      "worktree": "CLEAN",
+      "cli_version": "0.1.0",
+      "cli": "OBSERVED_PASS",
+      "graph_backend": "NOT_RUNNING",
+      "public_dependency": false
+    },
+    "gettingsciencedone": {
+      "head": "d90c4d6503af627ef2a037489952b1bd54c85127",
+      "branch": "federation/v1.0.0b2-gsigmad-remediation",
+      "worktree": "CLEAN",
+      "cli_version": "1.3.0b2",
+      "cli": "OBSERVED_PASS",
+      "doctor": "DEGRADED_GLOBAL_SKILL_DRIFT",
+      "public_dependency": false
+    }
+  },
+  "model": {
+    "name": "longhorizon-liquid-230m:latest",
+    "architecture": "lfm2",
+    "ollama_id": "fea00095c205",
+    "parameters": 229690000,
+    "quantization": "Q4_K_M",
+    "reported_context_length": 128000,
+    "configured_num_ctx": 4096,
+    "execution": "OBSERVED_PASS",
+    "instruction_following_exact_string_test": "NEGATIVE"
+  },
+  "android": {
+    "adb": "ABSENT_ON_STUDIO",
+    "android_sdk": "ABSENT_ON_STUDIO",
+    "native_s26_inference": "NOT_TESTED",
+    "browser_sdk": "IMPLEMENTED_AND_NODE_EXECUTED"
+  },
+  "claim_boundary": "Built/source-present is distinct from live/runtime-ready. Public demo depends only on Python, Ollama, installed Liquid model and optional Ollarma chat."
+}

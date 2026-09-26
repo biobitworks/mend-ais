@@ -1,0 +1,39 @@
+{
+  "demo_state": "EXECUTED",
+  "dataset": {
+    "id": "mend-synthetic-wound-core-v1",
+    "synthetic": true,
+    "sha256": "4aaadc135a984aa9cde71c9a49cd90d85f557622148f7ca755a3251046d457ad"
+  },
+  "model_advisory": {
+    "transport": "ollarma",
+    "status": "answered",
+    "model": "longhorizon-liquid-230m:latest",
+    "text": "The synthetic demo health data shows a 8.2% blood sugar level and a condition code E11.621, with significant tissue changes including 75% granulation, 5% necrosis, 20% slough, and a wound area of 4.12 cm\u00b2 in the left plantar forefoot."
+  },
+  "release": {
+    "schema": "mend.release.v1",
+    "purpose": "research",
+    "source_sha256": "4aaadc135a984aa9cde71c9a49cd90d85f557622148f7ca755a3251046d457ad",
+    "clinical_metrics": {
+      "a1c_percent": 8.2,
+      "wound_area_cm2": 4.12,
+      "tissue_composition_percent": {
+        "granulation": 75,
+        "slough": 20,
+        "necrosis": 5
+      },
+      "wound_site": "Left plantar forefoot",
+      "condition_code": "E11.621"
+    },
+    "subject_key": "d49dca93d043e2b8",
+    "policy": "research_minimum_v1"
+  },
+  "release_sha256": "f58f405f78986869e8f4b8c3ad605dc4b731e8dba7d9070c2ed8672b4786e140",
+  "egress_scan": {
+    "policy": "zero_explicit_identifiers",
+    "forbidden_hits": [],
+    "pass": true
+  },
+  "claim_boundary": "Model output is advisory and is never the release authority."
+}

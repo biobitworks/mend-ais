@@ -1,0 +1,131 @@
+{
+  "schema_version": "mend.public_release_receipt.v1",
+  "generated_at": "2026-09-26T17:07:45.597416Z",
+  "root_kind": "MEND_PUBLIC_RELEASE_MERKLE_V1",
+  "hash": "SHA-256",
+  "leaf_order": "lexicographic path",
+  "leaf_preimage": "b'mend-release-leaf-v1\\0' || UTF8(path) || NUL || ASCII(file_sha256_hex)",
+  "node_preimage": "b'mend-release-node-v1\\0' || left_digest_bytes || right_digest_bytes",
+  "odd_node_rule": "duplicate final node",
+  "canonical_leaf_count": 18,
+  "tree_widths": [
+    18,
+    9,
+    5,
+    3,
+    2,
+    1
+  ],
+  "canonical_leaves": [
+    {
+      "path": ".gitignore",
+      "bytes": 42,
+      "file_sha256": "841cb82943a911a1eba910ab9ef00611b9973aacd2defb967383ebaaf359848d",
+      "leaf_sha256": "3b4c20d1f1c5ad819b9e511e7e05521a8d489bc893b2109e2d2fd79976ca19aa"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4874,
+      "file_sha256": "0f1f134db767796cd1890812a0c4a6c56cff1b4ee1ecb19aa3974f95ebb9b731",
+      "leaf_sha256": "990d14804bf225a1445a5d51aa2bd1ab0f5a0066067dfe9b5ddd47d692e74390"
+    },
+    {
+      "path": "data/core/synthetic_fhir_bundle.json",
+      "bytes": 2578,
+      "file_sha256": "80fc1fbb5eb3f600435cbc6353189bd9716240e42cda94f8d375585d36c78a9a",
+      "leaf_sha256": "5017a9b43cb3b002c04c58a426b0afce5a12262b892b58f2cc0adebbdd625276"
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "bytes": 1848,
+      "file_sha256": "a73c3d8e83d29cd3f3d4433e256da8f6cb54bc1bb62aacd02916cf30cdf809e4",
+      "leaf_sha256": "bc028b03dc405509d5bfaf38d4b6493f680d547cf36fc091747632eca29b0d77"
+    },
+    {
+      "path": "docs/JUDGE_NAVIGATION.md",
+      "bytes": 1316,
+      "file_sha256": "830960e78f70df4f5f2b83e0796b8a638c7e8297015bd06598ff79e8e2e5c652",
+      "leaf_sha256": "6260128885092dd90677f03c052ee19dae5f96cf93e1185d26d2e3b297abdbf5"
+    },
+    {
+      "path": "fcg/core_fcg.json",
+      "bytes": 6263,
+      "file_sha256": "ddccdbd11d3fccacce605800f91e71305558339982b165190df05f27ece05d30",
+      "leaf_sha256": "3db187399012b1aed507b5c13f19894ca77e58a58cabc84c233f05d9a536cd6a"
+    },
+    {
+      "path": "receipts/demo_research_20260926.json",
+      "bytes": 1391,
+      "file_sha256": "36f3c8276e6201b456128c513608ab4b90f67530a018dfa0b88adea4f6c3dd2b",
+      "leaf_sha256": "7b6bf52b51777d69030003c254aa18dec7a55367e26b7e18b3732b18acb360c9"
+    },
+    {
+      "path": "receipts/studio_resource_audit_20260926.json",
+      "bytes": 3034,
+      "file_sha256": "6d2ad9207e2dcc471e3d8348a59a00770cd186f203e14683f5147390e768585d",
+      "leaf_sha256": "2167d8e4de2884e94aecf09bf67ac7a50034a1bc8e20a0e60cb30cadb2f775ba"
+    },
+    {
+      "path": "scripts/seal_release.py",
+      "bytes": 2488,
+      "file_sha256": "158d176969228502678f41fbe5bb768329fc590ee3f36751d1c409e1c9a28458",
+      "leaf_sha256": "caad2025fdb6a57d6f1839bf2a88f29d7c0fc8d4b1afaf2859bee635f1f76354"
+    },
+    {
+      "path": "scripts/smoke.sh",
+      "bytes": 1371,
+      "file_sha256": "1429698219da8935351ba9a91a438d3a1101ee5856e29dd622c44c72c25295c7",
+      "leaf_sha256": "a1818d6955b587ef4aae48aba80ff12e37fdc823c070595b7c386c7f1ca0477c"
+    },
+    {
+      "path": "scripts/start_macstudio.sh",
+      "bytes": 1163,
+      "file_sha256": "330fc009882141cf7a9cd1eefdc47a039ce1169d5e0d330f806be4c083d127b4",
+      "leaf_sha256": "5ec79788dba203f53aa95563f18c7cc1fef16d61710bc1b0a34501bb06512093"
+    },
+    {
+      "path": "scripts/status.sh",
+      "bytes": 115,
+      "file_sha256": "a7fbc3fdd542a77fd90acb050b539d44a078823739cbee683a4b4a8ffd58c0b4",
+      "leaf_sha256": "618b2a2f5c9dd624ac41e08d338c2d8176ac7172bb36415e2f503593d3d7a3f8"
+    },
+    {
+      "path": "scripts/stop.sh",
+      "bytes": 307,
+      "file_sha256": "bedc67c6b598f21dd6d53db33dcb77a6978651e60be3c9bb4c39c50b0b54989c",
+      "leaf_sha256": "c9a9319ad38e13f49c0600c0d738e76de1830fff92002624c4f2a7065b62127b"
+    },
+    {
+      "path": "scripts/verify_fcg.py",
+      "bytes": 1075,
+      "file_sha256": "890e7df8a0f61080cd3d287716ece6695237768561d9615d56ee4d29f528d256",
+      "leaf_sha256": "b8fafbb03b4b3efa15ffeb26b82056335d4816424725168b89f222bad1ee8fe5"
+    },
+    {
+      "path": "sdk/js/mend-sdk.js",
+      "bytes": 728,
+      "file_sha256": "331733e8eed1e3face98a1e7d326e129913c06516cc0f9381a7e845230f469b2",
+      "leaf_sha256": "680c5b666dcae9f363e615269d7cf4d86facbbcccbd2bc6c6538bf598455316f"
+    },
+    {
+      "path": "sdk/python/mend_sdk.py",
+      "bytes": 994,
+      "file_sha256": "4786d38a37069f31b65562a472f4fea8fb821f078c678338afd3fccf55b8091e",
+      "leaf_sha256": "9d663797ebdcd2721598767f540d6ac22ff7a77217dc879dd01968ac75388ff6"
+    },
+    {
+      "path": "server.py",
+      "bytes": 10131,
+      "file_sha256": "0d5657eb133878156c737cca70963e11ec98ee82f80cf268a3fac40448e1e2fa",
+      "leaf_sha256": "80b39de373f06d7231f12f90a7785af741a97e4606f7835a84379f11bffb433b"
+    },
+    {
+      "path": "web/index.html",
+      "bytes": 3159,
+      "file_sha256": "93e835420d302cf39455a12ca7dc8d522ba8fdabcbac2eb9834bcbdcecf6114c",
+      "leaf_sha256": "ed9e33226496180d7aa2ee3efb1ca2176c4bd0f114e66ca156d6dad0d2056add"
+    }
+  ],
+  "merkle_root_sha256": "aa7a4aad1951c7684e125782735528dddacc1bdcf7ecbd50ffbca17a3f32a6e1",
+  "scope_note": "Root covers the declared public artifact files above. It does not establish truth, causality, clinical validity, or compliance."
+}

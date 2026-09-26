@@ -1,0 +1,210 @@
+{
+  "schema_version": "mend.fcg.v1",
+  "graph_id": "mend-fcg-core-20260926",
+  "generated_at": "2026-09-26T17:00:17Z",
+  "root_kind": "NONE_NOT_COMPUTED",
+  "claim_boundary": "Hashes establish artifact identity/integrity only. Model output is advisory; deterministic policy controls release.",
+  "nodes": [
+    {
+      "id": "device.macstudio",
+      "type": "Device",
+      "label": "magicSTUDIObox",
+      "state": "OBSERVED_ONLINE",
+      "evidence": "Desktop Commander online 2026-09-26"
+    },
+    {
+      "id": "device.magicpro",
+      "type": "Device",
+      "label": "magicPRObox",
+      "state": "NOT_OBSERVED_THIS_TURN_OFFLINE",
+      "evidence": "Desktop Commander listed device offline"
+    },
+    {
+      "id": "device.s26plus",
+      "type": "Device",
+      "label": "Samsung Galaxy S26+",
+      "state": "NOT_TESTED",
+      "evidence": "No ADB/Android SDK or remote phone session available on Studio"
+    },
+    {
+      "id": "dataset.synthetic_fhir_core_v1",
+      "type": "EvidenceSeed",
+      "label": "Synthetic FHIR-style wound core",
+      "state": "IMPLEMENTED",
+      "content_sha256": "80fc1fbb5eb3f600435cbc6353189bd9716240e42cda94f8d375585d36c78a9a",
+      "source_path": "data/core/synthetic_fhir_bundle.json",
+      "synthetic": true,
+      "canonical_json_sha256": "4aaadc135a984aa9cde71c9a49cd90d85f557622148f7ca755a3251046d457ad"
+    },
+    {
+      "id": "model.liquid.lfm2_230m_q4km",
+      "type": "Model",
+      "label": "Liquid LFM2 230M Q4_K_M",
+      "state": "OBSERVED_EXECUTED",
+      "runtime_name": "longhorizon-liquid-230m:latest",
+      "ollama_id": "fea00095c205",
+      "parameters": 229690000,
+      "context_length": 128000,
+      "configured_num_ctx": 4096
+    },
+    {
+      "id": "runtime.ollama",
+      "type": "Runtime",
+      "label": "Ollama",
+      "state": "OBSERVED_PASS",
+      "version": "0.33.0",
+      "endpoint": "http://127.0.0.1:11434"
+    },
+    {
+      "id": "runtime.ollarma",
+      "type": "Runtime",
+      "label": "Ollarma local execution",
+      "state": "OBSERVED_DEGRADED_CHAT_PASS",
+      "endpoint": "http://127.0.0.1:8484",
+      "reason_code": "SELECTION_STALE",
+      "private_head": "3f197544a376691f8265ad5ede877b3e63bfeb44"
+    },
+    {
+      "id": "framework.antigence",
+      "type": "Framework",
+      "label": "Antigence",
+      "state": "SOURCE_BUILT_RUNTIME_DEGRADED",
+      "private_head": "1f12b3c2b2f7df90e11753f74443e4add48d5b46",
+      "detail": "Working tree dirty; project .venv is a broken external-volume symlink. Not a live dependency of public MVP."
+    },
+    {
+      "id": "framework.seedgraph",
+      "type": "Framework",
+      "label": "SeedGraph",
+      "state": "CLI_PASS_BACKEND_NOT_RUNNING",
+      "version": "0.1.0",
+      "private_head": "0652bc87d583c1e93464b848b23d0a5150d4f589"
+    },
+    {
+      "id": "framework.gsigmad",
+      "type": "Framework",
+      "label": "GettingScienceDone / gsigmad",
+      "state": "CLI_PASS_DOCTOR_DEGRADED",
+      "version": "1.3.0b2",
+      "private_head": "d90c4d6503af627ef2a037489952b1bd54c85127"
+    },
+    {
+      "id": "sdk.python",
+      "type": "SDK",
+      "label": "Mend Python SDK",
+      "state": "OBSERVED_EXECUTED_PASS_ON_MAC",
+      "source_path": "sdk/python/mend_sdk.py",
+      "target": "Mac/downstream agents"
+    },
+    {
+      "id": "sdk.browser",
+      "type": "SDK",
+      "label": "Mend browser SDK",
+      "state": "OBSERVED_EXECUTED_PASS_IN_NODE_S26_NOT_TESTED",
+      "source_path": "sdk/js/mend-sdk.js",
+      "target": "Samsung S26+/browser"
+    },
+    {
+      "id": "service.mend_public_demo",
+      "type": "Service",
+      "label": "Mend public demo bridge",
+      "state": "OBSERVED_EXECUTED_PASS",
+      "source_path": "server.py",
+      "endpoint": "http://127.0.0.1:8899",
+      "evidence": "scripts/start_macstudio.sh + scripts/smoke.sh passed on magicSTUDIObox 2026-09-26"
+    },
+    {
+      "id": "policy.release_gate_v1",
+      "type": "Policy",
+      "label": "Deterministic purpose-bound release gate",
+      "state": "IMPLEMENTED",
+      "detail": "research strips explicit identifiers; treatment synthetic-demo route may include identity"
+    },
+    {
+      "id": "check.explicit_identifier_egress",
+      "type": "Check",
+      "label": "Explicit identifier egress scan",
+      "state": "OBSERVED_EXECUTED_PASS",
+      "evidence": "research release forbidden_hits=[]"
+    }
+  ],
+  "edges": [
+    {
+      "from": "dataset.synthetic_fhir_core_v1",
+      "to": "service.mend_public_demo",
+      "type": "INGESTED_BY"
+    },
+    {
+      "from": "model.liquid.lfm2_230m_q4km",
+      "to": "runtime.ollama",
+      "type": "SERVED_BY"
+    },
+    {
+      "from": "runtime.ollarma",
+      "to": "runtime.ollama",
+      "type": "ROUTES_TO"
+    },
+    {
+      "from": "service.mend_public_demo",
+      "to": "runtime.ollarma",
+      "type": "REQUESTS_ADVISORY_INFERENCE_FROM"
+    },
+    {
+      "from": "service.mend_public_demo",
+      "to": "policy.release_gate_v1",
+      "type": "ENFORCES"
+    },
+    {
+      "from": "policy.release_gate_v1",
+      "to": "check.explicit_identifier_egress",
+      "type": "VERIFIED_BY"
+    },
+    {
+      "from": "sdk.python",
+      "to": "service.mend_public_demo",
+      "type": "CALLS"
+    },
+    {
+      "from": "sdk.browser",
+      "to": "service.mend_public_demo",
+      "type": "CALLS"
+    },
+    {
+      "from": "device.macstudio",
+      "to": "runtime.ollama",
+      "type": "HOSTS"
+    },
+    {
+      "from": "device.macstudio",
+      "to": "runtime.ollarma",
+      "type": "HOSTS"
+    },
+    {
+      "from": "device.macstudio",
+      "to": "service.mend_public_demo",
+      "type": "HOSTS"
+    },
+    {
+      "from": "device.s26plus",
+      "to": "sdk.browser",
+      "type": "TARGETS"
+    },
+    {
+      "from": "framework.antigence",
+      "to": "policy.release_gate_v1",
+      "type": "FUTURE_ADAPTER_FOR"
+    },
+    {
+      "from": "framework.seedgraph",
+      "to": "dataset.synthetic_fhir_core_v1",
+      "type": "PROVENANCE_COMPATIBLE_WITH"
+    },
+    {
+      "from": "framework.gsigmad",
+      "to": "check.explicit_identifier_egress",
+      "type": "GOVERNANCE_ADAPTER_FOR"
+    }
+  ],
+  "release_seal_receipt": "receipts/public_release_receipt.json",
+  "release_seal_state": "COMPUTED_EXTERNALLY_OVER_DECLARED_PUBLIC_LEAVES"
+}

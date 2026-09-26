@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mend AIs — Judge Console</title>
+<style>
+:root{font-family:Inter,system-ui,sans-serif;color-scheme:dark;background:#071019;color:#e8f0f7}
+body{max-width:1180px;margin:0 auto;padding:24px}
+h1{margin-bottom:4px}.sub{color:#9db0c1;margin-top:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
+.card{background:#0c1824;border:1px solid #213548;border-radius:12px;padding:16px}
+button{background:#2c7df0;color:white;border:0;border-radius:8px;padding:10px 14px;margin:4px;cursor:pointer}
+button.secondary{background:#263a4d}
+pre{white-space:pre-wrap;word-break:break-word;background:#050b11;border-radius:8px;padding:12px;max-height:420px;overflow:auto}
+table{width:100%;border-collapse:collapse}th,td{padding:8px;border-bottom:1px solid #213548;text-align:left;vertical-align:top}
+</style>
+</head>
+<body>
+<h1>Mend AIs</h1>
+<p class="sub">Local-first health data mesh — public judge console</p>
+<div class="card"><strong>Claim boundary:</strong> model output is advisory. A deterministic release gate decides what may leave the local boundary. Synthetic data only.</div>
+<h2>Live controls</h2>
+<div>
+<button id="statusBtn">Refresh status</button>
+<button id="researchBtn">Run research release</button>
+<button id="treatmentBtn" class="secondary">Run treatment release</button>
+<button id="fcgBtn" class="secondary">Show FCG</button>
+</div>
+<div class="grid">
+<section class="card"><h3>Runtime</h3><pre id="status">Press Refresh status.</pre></section>
+<section class="card"><h3>Execution / Release</h3><pre id="demo">Run a release.</pre></section>
+</div>
+<h2>Judge navigation</h2>
+<table>
+<thead><tr><th>Artifact</th><th>Purpose</th></tr></thead>
+<tbody>
+<tr><td><code>fcg/core_fcg.json</code></td><td>Machine-readable graph of dataset, model, runtimes, SDKs, devices and evidence state.</td></tr>
+<tr><td><code>data/core/synthetic_fhir_bundle.json</code></td><td>Synthetic health-record input. No real PHI.</td></tr>
+<tr><td><code>sdk/python/mend_sdk.py</code></td><td>Mac / downstream-agent client.</td></tr>
+<tr><td><code>sdk/js/mend-sdk.js</code></td><td>Browser/Samsung client surface.</td></tr>
+<tr><td><code>receipts/</code></td><td>Observed machine and release evidence.</td></tr>
+</tbody>
+</table>
+<h2>FCG</h2>
+<pre id="fcg">Press Show FCG.</pre>
+<script type="module">
+import { MendClient } from "/sdk/mend-sdk.js";
+const client = new MendClient("");
+const show = (id, obj) => document.getElementById(id).textContent = JSON.stringify(obj, null, 2);
+document.getElementById("statusBtn").onclick = async () => show("status", await client.status());
+document.getElementById("researchBtn").onclick = async () => show("demo", await client.runDemo("research"));
+document.getElementById("treatmentBtn").onclick = async () => show("demo", await client.runDemo("treatment"));
+document.getElementById("fcgBtn").onclick = async () => show("fcg", await client.fcg());
+client.status().then(x => show("status", x)).catch(e => show("status", {error:String(e)}));
+</script>
+</body>
+</html>

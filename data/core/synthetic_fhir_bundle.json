@@ -1,0 +1,75 @@
+{
+  "resourceType": "Bundle",
+  "id": "mend-synthetic-wound-core-v1",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {"system": "https://mend.local/tags", "code": "synthetic", "display": "Synthetic demo data only"}
+    ]
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "synthetic-patient-001",
+        "identifier": [
+          {"system": "https://mend.local/mrn", "value": "SYN-MRN-0001"}
+        ],
+        "name": [{"family": "Testpatient", "given": ["Maya"]}],
+        "birthDate": "1982-11-14",
+        "telecom": [{"system": "email", "value": "maya.synthetic@example.invalid"}],
+        "address": [{"line": ["100 Synthetic Way"], "city": "Testville", "state": "CA", "postalCode": "90000"}]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "a1c-001",
+        "status": "final",
+        "subject": {"reference": "Patient/synthetic-patient-001"},
+        "code": {
+          "coding": [{"system": "http://loinc.org", "code": "4548-4", "display": "Hemoglobin A1c/Hemoglobin.total in Blood"}],
+          "text": "Hemoglobin A1c"
+        },
+        "valueQuantity": {"value": 8.2, "unit": "%"}
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "wound-condition-001",
+        "subject": {"reference": "Patient/synthetic-patient-001"},
+        "code": {
+          "coding": [{"system": "http://hl7.org/fhir/sid/icd-10-cm", "code": "E11.621", "display": "Type 2 diabetes mellitus with foot ulcer"}],
+          "text": "Synthetic diabetic foot ulcer"
+        },
+        "bodySite": [{"text": "Left plantar forefoot"}],
+        "clinicalStatus": {"text": "active"}
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "wound-area-001",
+        "status": "final",
+        "subject": {"reference": "Patient/synthetic-patient-001"},
+        "code": {"text": "Wound area"},
+        "valueQuantity": {"value": 4.12, "unit": "cm2"}
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "wound-tissue-001",
+        "status": "final",
+        "subject": {"reference": "Patient/synthetic-patient-001"},
+        "code": {"text": "Wound tissue composition"},
+        "component": [
+          {"code": {"text": "granulation"}, "valueQuantity": {"value": 75, "unit": "%"}},
+          {"code": {"text": "slough"}, "valueQuantity": {"value": 20, "unit": "%"}},
+          {"code": {"text": "necrosis"}, "valueQuantity": {"value": 5, "unit": "%"}}
+        ]
+      }
+    }
+  ]
+}
