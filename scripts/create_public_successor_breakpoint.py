@@ -5,11 +5,14 @@ from pathlib import Path
 root=Path(__file__).resolve().parents[1]
 parent=json.loads(next((root/"breakpoints").glob("bp7_*.json")).read_text())
 excluded={"breakpoints/bp8_mend_public_successor_merkle_v1.json"}
+tracked=subprocess.run(
+ ["git","ls-files","-z"],cwd=root,capture_output=True,check=True
+).stdout.split(b"\0")
 paths=[]
-for path in root.rglob("*"):
- if not path.is_file() or ".git" in path.parts or "__pycache__" in path.parts or path.name == ".DS_Store": continue
- logical=str(path.relative_to(root))
- if logical not in excluded: paths.append(logical)
+for raw_path in tracked:
+ if not raw_path: continue
+ logical=raw_path.decode("utf-8")
+ if logical not in excluded and (root/logical).is_file(): paths.append(logical)
 leaves=[]
 for logical in sorted(paths):
  raw=(root/logical).read_bytes(); file_hash=hashlib.sha256(raw).hexdigest()

@@ -14,7 +14,15 @@ for number in range(9):
  if not matches: check(f"BP{number}",False); continue
  bp=json.loads(matches[-1].read_text())
  leaves=bp["canonical_leaves"]
- current=all((root/l["logical_path"]).is_file() and hashlib.sha256((root/l["logical_path"]).read_bytes()).hexdigest()==l["file_sha256"] for l in leaves)
+ paths=[l["logical_path"] for l in leaves]
+ current=paths==sorted(set(paths))
+ for leaf in leaves:
+  path=root/leaf["logical_path"]
+  file_hash=hashlib.sha256(path.read_bytes()).hexdigest() if path.is_file() else None
+  expected_leaf=hashlib.sha256(
+   b"mend-fco-leaf-v1\0"+leaf["logical_path"].encode()+b"\0"+leaf["file_sha256"].encode()
+  ).hexdigest()
+  current &= file_hash==leaf["file_sha256"] and expected_leaf==leaf["leaf_sha256"]
  level=[bytes.fromhex(l["leaf_sha256"]) for l in leaves]
  while len(level)>1:
   if len(level)%2: level.append(level[-1])
