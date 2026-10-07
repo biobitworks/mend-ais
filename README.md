@@ -117,3 +117,5 @@ python3 scripts/unlock_local.py --list
 ```
 
 The descriptor is written outside the repository with user-only permissions. Public agents see capability keys and evidence states; machine-local paths and endpoints are returned only on the local node when a specific capability is requested.
+
+**License:** Unless otherwise explicitly licensed, original Biobitworks material in this repository is licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/); third-party components remain under their respective licenses.
